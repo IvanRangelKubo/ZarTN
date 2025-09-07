@@ -3,25 +3,28 @@
     'secundary': sections.secundary.products,
   } %}
  
-  <div class="seccproductos">
-    <div class="customcontainer">
+  <div class="carrusel-productos">
+    <div class="custom-container">
 
-      <div class="secctitles">
-        <h2 class="maintitle">{{ settings.home_carrousel_products_title | raw }}</h2>
-        <div class="linetitle"></div>
+      <div class="contenedor-titulos">
+        <h2 class="titlesecc">{{ settings.home_carrousel_products_title | raw }}</h2>
+        <img src="{{ "images/title_decoration.svg" | static_url }}" alt="" class="icon_titles">
       </div>
 
-      <div class="w-embed">
-       <div class="owl-carousel productosowl owl-theme" id="sync2">
+      <div class="customhtml w-embed">
+       <div class="owl-carousel productos owl-theme" id="sync2">
           {% for product in section[settings.home_carrousel_products] %}
             <div class="container-producto">
               <div class="contimgproducto">
+
                 {% if not product.has_stock %}
-                  <div class="etiquetas-prod">AGOTADO</div>
+                  <div class="etiquetas-prod agotado">AGOTADO</div>
                 {% endif %}
+
                 {% if product.compare_at_price > product.price %}
                   <div class="etiquetas-prod oferta">-{{ (((product.compare_at_price - product.price) * 100) / product.compare_at_price) | round(0, 'floor') }}%</div>
                 {% endif %}
+
                 <a href="{{product.canonical_url}}" class="linkproducto w-inline-block">
                   {% if product.images_count > 1 %}
                     <div style="background-image:url({{ product.images[1] | product_image_url('original') }})" class="imgback" ></div>
@@ -42,22 +45,6 @@
                         style="background-image:url({{ 'images/placeholder_amieworld.webp' | static_url }})"></div>
                   {% endif %}
                 </a>
-
-                {% if product.available and not product.variations %}
-                  <form class="js-product-form" method="post" action="{{ store.cart_url }}">
-                    <input type="hidden" name="add_to_cart" value="{{ product.id }}" />
-                    <input type="hidden" name="quantity" value="1" />
-
-                    <button type="submit"
-                            class="adtobag js-addtocart js-prod-submit-form"
-                            data-store="product-buy-button">
-                      <img src="{{ "images/addtobagicon.svg" | static_url }}" 
-                          alt="Agregar" 
-                          class="iconquickshop">
-                    </button>
-                  </form>
-                {% endif %}
-
               </div>
 
               <div class="container-titleandprices">
@@ -66,7 +53,7 @@
                 <a href="{{product.canonical_url}}" class="nombre-producto">{{product.name}}</a>
                 <div class="precios-container">
                     {% if product.compare_at_price or product.promotional_offer %}
-                      <div class="precio-regular">{{ product.compare_at_price | money }}</div>
+                      <div class="precio-regular" style="text-decoration: line-through;">{{ product.compare_at_price | money }}</div>
                       <div class="precio-oferta">{{ product.price | money }}</div>
                     {% else %}
                       <div class="precio-regular">{{ product.price | money }}</div>
@@ -74,6 +61,19 @@
                 </div>
     
               </div>
+
+                {% if product.available and not product.variations %}
+                  <form class="js-product-form" method="post" action="{{ store.cart_url }}">
+                    <input type="hidden" name="add_to_cart" value="{{ product.id }}" />
+                    <input type="hidden" name="quantity" value="1" />
+
+                    <button type="submit"
+                            class="btnadd w-button js-addtocart js-prod-submit-form"
+                            data-store="product-buy-button">
+                            COMPRAR
+                    </button>
+                  </form>
+                {% endif %}
 
             </div>
           {% endfor %}
