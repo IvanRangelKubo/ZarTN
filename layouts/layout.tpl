@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="es" data-wf-page="6887a744c366a2ae40132ca6" data-wf-site="6887a73ec366a2ae40132b42" >
+<html lang="es" data-wf-page="678aa7d7dee3a3d773a6d4f2" data-wf-site="678aa7d7dee3a3d773a6d4fc" >
     <head>
+        <meta charset="utf-8">
         <link rel="preconnect" href="{{ store_resource_hints }}" />
         <link rel="dns-prefetch" href="{{ store_resource_hints }}" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,10 +18,10 @@
         <!-- Preconectar a Google Fonts -->
         <link href="https://fonts.googleapis.com" rel="preconnect">
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
 
         <!-- Cargar WebFont Loader -->
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-        <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"]  }});</script>
+        <script type="text/javascript">WebFont.load({  google: {    families: ["Ubuntu:300,300italic,400,400italic,500,500italic,700,700italic","Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Roboto:regular,500,700,900"]  }});</script>
         <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
 
 
@@ -333,100 +334,124 @@
 
         <!--Webflow Configuration -->
 
-        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6887a73ec366a2ae40132b42" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="{{ 'js/amieworld.js' | static_url }}"></script>
+        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=678aa7d7dee3a3d773a6d4fc" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="{{ 'js/zardelasllantas.js' | static_url }}"></script>
 
         <!-- Script ShareThis (cargado de forma asincrónica) -->
-        <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=668eee1ee1507500197b00f9&product=sop" async="async"></script>
+        <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=684a0a56aa375800190784e6&product=sop" async="async"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
         <!--Owl carrucel-->
 
-        <script>
-            $(document).ready(function(){
-            $(".productosowl").owlCarousel({
-                loop:true,
-                margin:3,    
-                navRewind: true,
-                autoWidth:false,
-                autoplay:false,
-                slideSpeed: 4000,
-                navText: ['<div class="arrowslider w-slider-arrow-left"><div class="iconslidermain w-icon-slider-left"></div></div>','<div class="arrowslider w-slider-arrow-right"><div class="iconslidermain w-icon-slider-right"></div></div>'],
-                responsiveClass:true,
-                responsive:{
-                    0:{
-                        items:1,
-                        nav:false,
-                        dots:true,
-                        mouseDrag: true,
-                        touchDrag: true
-                    },
-                    480:{
-                        items:2,
-                        nav:false,
-                        dots:true,
-                        mouseDrag: true,
-                        touchDrag: true
-                    },
-                    767:{
-                        items:3,
-                        nav:true,
-                        dots:false,
-                        mouseDrag: true,
-                        touchDrag: true
-                    },
-                991:{
-                        items:4,
-                        nav:true,
-                        dots:false
-                    }
-                }
-            });
-            });  
-        </script>
-        <script>
-            $(document).ready(function(){
-            $(".marcasowl").owlCarousel({
-            loop:true,
-            margin:3,    
-            navRewind: true,
-            autoWidth:false,
-            autoplay:false,
-            slideSpeed: 4000,
-            navText: ['<div class="mainslider-arrow w-slider-arrow-left"><div class="w-icon-slider-left"></div></div>','<div class="mainslider-arrow w-slider-arrow-right"><div class="w-icon-slider-right"></div></div>'],
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:3,
-                    nav:false,
-                    dots:true,
-                    mouseDrag: true,
-                    touchDrag: true
-                },
-                480:{
+          <script>
+                $(document).ready(function(){
+                $(".productos").owlCarousel({
                     items:4,
-                    nav:false,
-                    dots:true,
-                    mouseDrag: true,
-                    touchDrag: true
-                },
-                767:{
-                    items:6,
-                    nav:true,
-                    dots:false,
-                    mouseDrag: true,
-                    touchDrag: true
-                },
-            991:{
-                    items:9,
-                    nav:true,
-                    dots:false
+                    loop:true,
+                    margin:10,
+                    autoplay:true,
+                    autoplaySpeed: 4500,
+                    autoplayHoverPause:true,
+                    autoplayHoverPause:true,
+                    responsiveClass:true,
+                    responsive:{
+                        0:{
+                            items:2,
+                            nav:true,
+                        dots:false
+                        },
+                        480:{
+                            items:3,
+                            nav:true,
+                            dots:false
+                        },
+                        767:{
+                            items:3,
+                            nav:true,
+                        dots:false
+                        },
+                    991:{
+                            items:4,
+                            nav:true,
+                        dots:false
+                        }
+                    }
+                });
+                });    
+            </script>
+            <script>
+                $(document).ready(function(){
+                $(".marcas").owlCarousel({
+                    items:4,
+                    loop:true,
+                    margin:10,
+                    autoplay:false,
+                    autoplaySpeed:false,
+                    autoplayHoverPause:true,
+                    navText: ['<div class="flechas w-slider-arrow-left"></div>','<div class="flechas w-slider-arrow-right"></div>'],
+                    autoplayHoverPause:true,
+                    responsiveClass:true,
+                    responsive:{
+                        0:{
+                            items:2,
+                            nav:true,
+                        dots:false
+                        },
+                        480:{
+                            items:2,
+                            nav:true,
+                            dots:false
+                        },
+                        767:{
+                            items:4,
+                            nav:false,
+                        dots:false
+                        },
+                    991:{
+                            items:4,
+                            nav:false,
+                        dots:false
+                        }
+                    }
+                });
+                });    
+            </script>
+            <style>
+                #sync2.owl-theme {
+                position: relative;
                 }
-            }
-        });
-        });  
-        </script>
+                #sync2.owl-theme .owl-next.disabled .arrow-carrusel, #sync2.owl-theme .owl-prev.disabled .arrow-carrusel {
+                    color: transparent !important;
+                    background-color: transparent !important;
+                } 
+                #sync2.owl-theme .owl-next.disabled:hover, #sync2.owl-theme .owl-prev.disabled:hover {
+                    color: transparent !important;
+                    background-color: transparent !important;
+                }   
+                #sync2.owl-theme .owl-next, #sync2.owl-theme .owl-prev {
+                    width: auto;
+                    height: 40px;
+                    margin-top: -20px;
+                    position: absolute;
+                    top: 50%;
+                    color: #CC3333;
+                    font-size: 35px;
+                    border-radius: 0px;
+                }
+                    #sync2.owl-theme .owl-prev {
+                    left: -30px;
+                }
+                #sync2.owl-theme .owl-next {
+                    right: -30px;
+                } 
+                .owl-theme .owl-nav [class*=owl-]:hover {
+                    background: #fff;
+                }
+                img.iconquickshop {
+                    width: 30px !important;
+                }
+            </style>
 
     </body>
 </html>
