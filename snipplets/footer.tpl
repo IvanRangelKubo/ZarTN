@@ -102,7 +102,7 @@
 
       <div id="w-node-_34b901d2-fc78-12e8-962d-984706326186-06326141" class="w-layout-layout stackcopyr wf-layout-layout">
         <div id="w-node-_34b901d2-fc78-12e8-962d-984706326187-06326141" class="w-layout-cell cellcopyr">
-          <div class="copytxt" id="copy">Copyright © ZAR DE LAS LLANTAS • Designed by <a href="#" class="kdlink">Kubo Digital</a></div>
+          <div class="copytxt" id="copy">Copyright © ZAR DE LAS LLANTAS • Designed by <a href="https://kubodigital.mx" target="_blank" class="kdlink">Kubo Digital</a></div>
           <div style=" display: flex; flex-direction: row; justify-content: center; ">{{ new_powered_by_link }}</div>
         </div>
         <div class="w-layout-cell">
