@@ -149,7 +149,7 @@
 
         <link rel="stylesheet" href="{{ 'css/style-async.scss.tpl' | static_url }}" media="print" onload="this.media='all'">
         {# IV: Se incluye el CSS custom del tema #}
-        <link rel="stylesheet" href="{{ 'css/personalized3.css' | static_url }}">
+        <link rel="stylesheet" href="{{ 'css/ZarStyles.css' | static_url }}">
 
         <style>
             iframe#store_bar_iframe {
