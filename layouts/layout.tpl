@@ -63,72 +63,37 @@
         </style>
 
         <style type="text/css">
-            #barritascroll::-webkit-scrollbar {
-            width: 8px;
+            #barritabuscador::-webkit-scrollbar {
+            width: 10px;
             height: 6px;
             }
-            #barritascroll::-webkit-scrollbar-button {
+            #barritabuscador::-webkit-scrollbar-button {
             width: 0px;
             height: 0px;
             }
-            #barritascroll::-webkit-scrollbar-thumb {
+            #barritabuscador::-webkit-scrollbar-thumb {
             background: #000;
-            border: 0px none #C6C6C6;
+            border: 1px none #C6C6C6;
             border-radius: 0px;
             }
-            #barritascroll::-webkit-scrollbar-thumb:hover {
+            #barritabuscador::-webkit-scrollbar-thumb:hover {
             background: #000;
             }
-            #barritascroll::-webkit-scrollbar-thumb:active {
+            #barritabuscador::-webkit-scrollbar-thumb:active {
             background: #000;
             }
-            #barritascroll::-webkit-scrollbar-track {
-            background: #FFF5F8;
-            border: 0px solid #FFF5F8;
+            #barritabuscador::-webkit-scrollbar-track {
+            background: #C6C6C6;
+            border: 1px solid #C6C6C6;
             border-radius: 0px;
             }
-            #barritascroll::-webkit-scrollbar-track:hover {
-            background: #FFF5F8;
+            #barritabuscador::-webkit-scrollbar-track:hover {
+            background: #C6C6C6;
             }
-            #barritascroll::-webkit-scrollbar-track:active {
-            background: #FFF5F8;
+            #barritabuscador::-webkit-scrollbar-track:active {
+            background: #C6C6C6;
             }
-            #barritascroll::-webkit-scrollbar-corner {
-            background: transparent;
-            }
-        </style>
-        <style type="text/css">
-            #barritadescrip::-webkit-scrollbar {
-            width: 8px;
-            height: 6px;
-            }
-            #barritadescrip::-webkit-scrollbar-button {
-            width: 0px;
-            height: 0px;
-            }
-            #barritadescrip::-webkit-scrollbar-thumb {
-            background: #000;
-            border: 0px none #C6C6C6;
-            border-radius: 0px;
-            }
-            #barritadescrip::-webkit-scrollbar-thumb:hover {
-            background: #000;
-            }
-            #barritadescrip::-webkit-scrollbar-thumb:active {
-            background: #000;
-            }
-            #barritadescrip::-webkit-scrollbar-track {
-            background: #FFF5F8;
-            border: 0px solid #FFF5F8;
-            border-radius: 0px;
-            }
-            #barritadescrip::-webkit-scrollbar-track:hover {
-            background: #FFF5F8;
-            }
-            #barritadescrip::-webkit-scrollbar-track:active {
-            background: #FFF5F8;
-            }
-            #barritadescrip::-webkit-scrollbar-corner {
+            #barritabuscador::-webkit-scrollbar-corner {
             background: transparent;
             }
         </style>

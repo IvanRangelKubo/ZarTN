@@ -21,9 +21,8 @@
         padding-top: 8px;
     }
 
-    .search-suggest-list {
-        border: 1px solid var(--darkgrey);
-        background-color: #fff;
+    .search-suggest-list {     
+        background-color: #fcfcfced;
         width: 100%;
         height: auto;
         display: block;

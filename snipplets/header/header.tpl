@@ -4,19 +4,21 @@
 {# Header #}
 <div class=" js-head-main section-headercust" data-store="head">
     
-    <div data-w-id="c828cb3c-650a-2310-28ed-eb3e6a59f889" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="customnav w-nav">
-      <div class="customcontainer navbar">
+    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing="ease-in-out" role="banner" class="custom-navbar w-nav">
+      <div class="custom-container">
+        <div class="topelementsnav">
 
-        <div class="menu-button w-nav-button">
+            <div class="menu-button w-nav-button">
             <div class="w-icon-nav-menu"></div>
+            </div>
+
+            {% snipplet "header/header-logo.tpl" %}
+
+            {% snipplet "navigation/navigation-nav-list.tpl" %}
+
+            {% snipplet "header/header-utilities.tpl" %}
+
         </div>
-
-        {% snipplet "header/header-logo.tpl" %}
-
-        {% snipplet "navigation/navigation-nav-list.tpl" %}
-
-        {% snipplet "header/header-utilities.tpl" %}
-
       </div>
     </div>
 
