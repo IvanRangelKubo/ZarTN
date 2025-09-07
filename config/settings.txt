@@ -118,6 +118,9 @@ Página de inicio
 	collapse
 		title = Garantias
 		backto = home_order_position
+	i18n_input
+		name = warranty_title
+		description = Titulo de la seccion
 	subtitle
 		subtitle = BANNER 1
 	image
@@ -141,6 +144,22 @@ Página de inicio
 		title = Cargar imagen (JPG)
 	textarea
 		name = banner_services_03_description
+		description = Descripción
+	subtitle
+		subtitle = BANNER 4
+	image
+		original = icon4.jpg
+		title = Cargar imagen (JPG)
+	textarea
+		name = banner_services_04_description
+		description = Descripción
+	subtitle
+		subtitle = BANNER 5
+	image
+		original = icon5.jpg
+		title = Cargar imagen (JPG)
+	textarea
+		name = banner_services_05_description
 		description = Descripción
 	collapse
 		title = Carrucel de marcas
