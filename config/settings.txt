@@ -273,69 +273,54 @@ Página de inicio
 		name = icon_alt_8
 		description = Texto alternativo (alt)
 	collapse
-		title = Banners de productos
+		title = Informacion sobre producto
 		backto = home_order_position
-	subtitle
-		subtitle = Titulo de seccion
-	textarea
-		name =	banners_section_title
-	subtitle
-		subtitle = Producto 1
-	checkbox
-		name = banner_01_show
-		description = Mostrar banner
+	i18n_input
+		name = banners_section_title
+		description = Titulo de la seccion
 	image
-		original = banner_01.jpg
-		title = Cargar imagen (JPG, GIF, PNG)
-		width = 600
-		height = 600
-	textarea
-		name = banner_01_descripcion
-		description = Descripcion
-	i18n_input
-		name = banner_01_url
-		description = Link
-	i18n_input
-		name = banner_01_alt
-		description = Texto alternativo (Alt)
+		original = banner_section_image.jpg
+		title = Cargar imagen (JPG,PNG)
 	subtitle
-		subtitle = Producto 2
-	checkbox
-		name = banner_02_show
-		description = Mostrar banner
+		subtitle = Banner 1
 	image
-		original = banner_02.jpg
-		title = Cargar imagen (JPG, GIF, PNG)
-		width = 600
-		height = 600
+		original = banner_section_icon_1.jpg
+		title = Cargar imagen (JPG,PNG)
+	i18n_input
+		name = banner_title_1
+		description = Titulo
 	textarea
-		name = banner_02_descripcion
-		description = Descripcion
-	i18n_input
-		name = banner_02_url
-		description = Link
-	i18n_input
-		name = banner_02_alt
-		description = Texto alternativo (Alt)
+		name =	banners_section_description_1
 	subtitle
-		subtitle = Procducto 3
-	checkbox
-		name = banner_03_show
-		description = Mostrar banner
+		subtitle = Banner 2
 	image
-		original = banner_03.jpg
-		title = Cargar imagen (JPG, GIF, PNG)
-		width = 600
-		height = 600
+		original = banner_section_icon_2.jpg
+		title = Cargar imagen (JPG,PNG)
+	i18n_input
+		name = banner_title_2
+		description = Titulo
 	textarea
-		name = banner_03_descripcion
-		description = Descripcion
+		name =	banners_section_description_2
+	subtitle
+		subtitle = Banner 3
+	image
+		original = banner_section_icon_3.jpg
+		title = Cargar imagen (JPG,PNG)
 	i18n_input
-		name = banner_03_url
-		description = Link
+		name = banner_title_3
+		description = Titulo
+	textarea
+		name =	banners_section_description_3
+	subtitle
+		subtitle = Banner 4
+	image
+		original = banner_section_icon_4.jpg
+		title = Cargar imagen (JPG,PNG)
 	i18n_input
-		name = banner_03_alt
-		description = Texto alternativo (Alt)
+		name = banner_title_4
+		description = Titulo
+	textarea
+		name =	banners_section_description_4
 	collapse
 		title = Productos destacados
 		backto = home_order_position
@@ -590,7 +575,7 @@ Página de inicio
 			welcome = Carrucel de marcas
 			products = Productos destacados
 			informatives = Garantias
-			categories = Banners de productos
+			categories = Informacion sobre producto
 			modules = Blog y Instagram
 			video = Reseñas
 			instafeed = Carrusel de productos
