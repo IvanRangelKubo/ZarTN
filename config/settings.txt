@@ -1167,33 +1167,28 @@ Pie de página
 	menu
 		name = footer_menu_2
 		description = Selecciona un menu para la segunda columna
-	subtitle
-		subtitle = Menu 3
-	i18n_input
-		name = menu_3_name
-		description = Titulo del menu
-	menu
-		name = footer_menu_3
-		description = Selecciona un menu para la primera columna
 	title
-		title = Redes sociales 
+		title = Redes sociales
 	i18n_input
-		name = tiktok_url
-		description = Url TikTok
+		name = facebook_url
+		description = Url Facebook
 	i18n_input
 		name = instagram_url
 		description = Url Instagram
 	i18n_input
-		name = facebook_url
-		description = Url Facebook
+		name = tiktok_url
+		description = Url TikTok
 	title
-		title = Suscripción al newsletter desde el footer
+		title = Contacto
 	i18n_input
-		name = news_title
-		description = Elegí el título para la sección 'Newsletter' en el footer
+		name = phone
+		description = Telefono
 	i18n_input
-		name = news_text
-		description = ¡Escribí algo para que tus clientes se suscriban a tu newsletter!
+		name = email
+		description = Correo Electronico
+	i18n_input
+		name = email_link
+		description = Link de correo Electronico
 	title
 		title = Medios de pago
 	image
