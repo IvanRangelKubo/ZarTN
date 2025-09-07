@@ -1,0 +1,1246 @@
+Colores de tu marca
+	meta
+		icon = paint-brush
+		advanced = false
+	color
+		name = primary_color
+		description = Color principal
+	subtitle
+		subtitle = <div class='js-color-description'>Aplica a los botones.</div>
+	color
+		name = accent_color
+		description = Color de acento
+	subtitle
+		subtitle = <div class='js-color-description'>Aplica a promociones y a mensajes de descuento, envío gratis y cuotas sin interés.</div>
+	title
+		title = Colores de contraste
+	color
+		name = background_color
+		description = Color de fondo
+	color
+		name = text_color
+		description = Color de textos
+	description
+		description = Para facilitar la lectura, asegurate de que los colores contrasten entre sí.
+	title
+		title = Combinaciones predeterminadas
+	description
+		description = Ideales para restablecer los colores por defecto del diseño.
+	palettes
+		palettes
+			palette_1
+				primary_color = #000000
+				background_color = #FFFFFF
+				text_color = #000000
+				accent_color = #808E25
+			palette_2
+				primary_color = #F29466
+				background_color = #F9F9F9
+				text_color = #CC8563
+				accent_color = #F29466
+			palette_3
+				primary_color = #86C2B4
+				background_color = #FFF9EE
+				text_color = #0F5672
+				accent_color = #86C2B4
+	subtitle
+		subtitle = <a target='_blank' href='https://ayuda.tiendanube.com/es_ES/124497-colores-de-tu-marca/como-cambiar-los-colores-de-mi-diseno/?utm_source=admin-desktop&utm_medium=feature-page&utm_campaign=help'>¿Cómo cambio los colores de mi diseño?</a>
+		
+Tipo de letra
+	meta
+		icon = font
+		advanced = false
+	font
+		name = font_headings
+		description = Títulos de páginas y banners
+		values
+			"Muli", sans-serif = Muli
+			"Playfair Display", Helvetica, Arial, sans-serif = Playfair
+			"Libre Baskerville", serif = Libre Baskerville
+			"Open Sans",sans-serif = Open Sans
+			"Slabo 27px", serif = Slabo
+			"Lora", serif = Lora			
+			"Droid Sans", Sans-serif = Droid Sans
+	font
+		name = font_rest
+		description = Texto en el resto del sitio
+		values
+			"Muli", sans-serif = Muli
+			"Lato", Helvetica, Arial, sans-serif = Lato
+			"Libre Baskerville", serif = Libre Baskerville
+			"Open Sans",sans-serif = Open Sans
+			"Slabo 27px", serif = Slabo
+			"Lora", serif = Lora			
+			"Droid Sans", Sans-serif = Droid Sans
+
+Encabezado
+	meta
+		icon = arrow-up
+		advanced = true
+	collapse
+		title = Encabezado
+	subtitle
+		subtitle = Logo
+	image
+		original = logo_header.jpg
+		title = Cargar Logo
+		width = 600
+		height = 600
+	menu
+		name = main_menu
+		description = Selecciona el menu de navegacion
+		
+Página de inicio
+	meta
+		icon = home
+		advanced = true
+		default = home_order_position
+	collapse
+		title = Carrusel de imágenes
+		backto = home_order_position
+	subtitle
+		subtitle = Imágenes para computadoras
+	gallery
+		name = slider
+		gallery_image = Agregar imagen
+		gallery_link = [Opcional] Página web a la que quieres que te lleve la imagen al hacer click
+		gallery_width = 1580
+		gallery_more_info = true
+	subtitle
+		subtitle = Imágenes para celulares
+	gallery
+		name = slider_mobile
+		gallery_image = Agregar imagen
+		gallery_link = [Opcional] Página web a la que quieres que te lleve la imagen al hacer click
+		gallery_width = 820
+		gallery_height = 1460
+		gallery_more_info = true
+	collapse
+		title = Garantias
+		backto = home_order_position
+	subtitle
+		subtitle = BANNER 1
+	image
+		original = icon1.jpg
+		title = Cargar imagen (JPG)
+	textarea
+		name = banner_services_01_description
+		description = "Descripción"
+	subtitle
+		subtitle = BANNER 2
+	image
+		original = icon2.jpg
+		title = Cargar imagen (JPG)
+	textarea
+		name = banner_services_02_description
+		description = Descripción
+	subtitle
+		subtitle = BANNER 3
+	image
+		original = icon3.jpg
+		title = Cargar imagen (JPG)
+	textarea
+		name = banner_services_03_description
+		description = Descripción
+	collapse
+		title = Carrucel de marcas
+		backto = home_order_position
+	subtitle
+		subtitle = Titulo de seccion
+	textarea
+		name =	brands_section_title
+	subtitle
+		subtitle = Marca 1
+	i18n_input
+		name = link_1
+		description = Link icono 1
+	image
+		original = icono1.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_1
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 2
+	i18n_input
+		name = link_2
+		description = Link icono 2
+	image
+		original = icono2.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_2
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 3
+	i18n_input
+		name = link_3
+		description = Link icono 3
+	image
+		original = icono3.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_3
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 4
+	i18n_input
+		name = link_4
+		description = Link icono 4
+	image
+		original = icono4.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_4
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 5
+	i18n_input
+		name = link_5
+		description = Link icono 5
+	image
+		original = icono5.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_5
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 6
+	i18n_input
+		name = link_6
+		description = Link icono 6
+	image
+		original = icono6.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_6
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 7
+	i18n_input
+		name = link_7
+		description = Link icono 7
+	image
+		original = icono7.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_7
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 8
+	i18n_input
+		name = link_8
+		description = Link icono 8
+	image
+		original = icono8.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_8
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 9
+	i18n_input
+		name = link_9
+		description = Link icono 9
+	image
+		original = icono9.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_9
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 10
+	i18n_input
+		name = link_10
+		description = Link icono 10
+	image
+		original = icono10.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_10
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 11
+	i18n_input
+		name = link_11
+		description = Link icono 11
+	image
+		original = icono11.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_11
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 12
+	i18n_input
+		name = link_12
+		description = Link icono 12
+	image
+		original = icono12.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_12
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 13
+	i18n_input
+		name = link_13
+		description = Link icono 13
+	image
+		original = icono13.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_13
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 14
+	i18n_input
+		name = link_14
+		description = Link icono 14
+	image
+		original = icono14.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_14
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 15
+	i18n_input
+		name = link_15
+		description = Link icono 15
+	image
+		original = icono15.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_15
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 16
+	i18n_input
+		name = link_16
+		description = Link icono 16
+	image
+		original = icono16.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_16
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 17
+	i18n_input
+		name = link_17
+		description = Link icono 17
+	image
+		original = icono17.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_17
+		description = Texto alternativo (alt)
+	subtitle
+		subtitle = Marca 18
+	i18n_input
+		name = link_18
+		description = Link icono 18
+	image
+		original = icono18.jpg
+		title = Cargar imagen (JPG,PNG)
+		width = 100
+		height = 100
+	i18n_input
+		name = icon_alt_18
+		description = Texto alternativo (alt)
+	collapse
+		title = Banners de productos
+		backto = home_order_position
+	subtitle
+		subtitle = Titulo de seccion
+	textarea
+		name =	banners_section_title
+	subtitle
+		subtitle = Producto 1
+	checkbox
+		name = banner_01_show
+		description = Mostrar banner
+	image
+		original = banner_01.jpg
+		title = Cargar imagen (JPG, GIF, PNG)
+		width = 600
+		height = 600
+	textarea
+		name = banner_01_descripcion
+		description = Descripcion
+	i18n_input
+		name = banner_01_url
+		description = Link
+	i18n_input
+		name = banner_01_alt
+		description = Texto alternativo (Alt)
+	subtitle
+		subtitle = Producto 2
+	checkbox
+		name = banner_02_show
+		description = Mostrar banner
+	image
+		original = banner_02.jpg
+		title = Cargar imagen (JPG, GIF, PNG)
+		width = 600
+		height = 600
+	textarea
+		name = banner_02_descripcion
+		description = Descripcion
+	i18n_input
+		name = banner_02_url
+		description = Link
+	i18n_input
+		name = banner_02_alt
+		description = Texto alternativo (Alt)
+	subtitle
+		subtitle = Procducto 3
+	checkbox
+		name = banner_03_show
+		description = Mostrar banner
+	image
+		original = banner_03.jpg
+		title = Cargar imagen (JPG, GIF, PNG)
+		width = 600
+		height = 600
+	textarea
+		name = banner_03_descripcion
+		description = Descripcion
+	i18n_input
+		name = banner_03_url
+		description = Link
+	i18n_input
+		name = banner_03_alt
+		description = Texto alternativo (Alt)
+	collapse
+		title = Productos destacados
+		backto = home_order_position
+	description
+		description = Podés destacar los productos que quieras en la página de inicio.
+	subtitle
+		subtitle = Titulo de productos destacados
+	textarea
+		name = home_featured_products_title
+	dropdown
+		name = home_featured_products
+		description = Listas de productos
+		values
+			primary = Productos destacados
+			secundary = Todos los productos
+	subtitle
+		subtitle = <a target='_blank' href='/admin/themes/settings/product_order/'>Elegí cuáles vas a destacar</a>
+	collapse
+		title = Blog y Instagram
+		backto = home_order_position
+	i18n_input
+		name = blog_section_title
+		description = Titulo de seccion
+	subtitle
+		subtitle = Descripcion
+	textarea
+		name = blog_description
+	subtitle
+		subtitle = Articulo 1
+	checkbox
+		name = show_article_1
+		description = Mostrar Articulo
+	image
+		original = article_1.jpg
+    title = Cargar imagen (JPG, PNG)
+    width = 600
+	i18n_input
+		name = blog_section_date_1
+		description = Fecha
+	i18n_input
+		name = blog_section_title_1
+		description = Titulo y Resumen
+	textarea
+		name = blog_article_1
+	i18n_input
+		name = blog_section_link_1
+		description = Link al blog
+	subtitle
+		subtitle = Articulo 2
+	checkbox
+		name = show_article_2
+		description = Mostrar Articulo
+	image
+		original = article_2.jpg
+    title = Cargar imagen (JPG, PNG)
+    width = 600
+	i18n_input
+		name = blog_section_date_2
+		description = Fecha
+	i18n_input
+		name = blog_section_title_2
+		description = Titulo y Resumen
+	textarea
+		name = blog_article_2
+	i18n_input
+		name = blog_section_link_2
+		description = Link al blog
+	subtitle
+		subtitle = Articulo 3
+	checkbox
+		name = show_article_3
+		description = Mostrar Articulo
+	image
+		original = article_3.jpg
+    title = Cargar imagen (JPG, PNG)
+    width = 600
+	i18n_input
+		name = blog_section_date_3
+		description = Fecha
+	i18n_input
+		name = blog_section_title_3
+		description = Titulo y Resumen
+	textarea
+		name = blog_article_3
+	i18n_input
+		name = blog_section_link_3
+		description = Link al blog
+	subtitle
+		subtitle = Articulo 4
+	checkbox
+		name = show_article_4
+		description = Mostrar Articulo
+	image
+		original = article_4.jpg
+    title = Cargar imagen (JPG, PNG)
+    width = 600
+	i18n_input
+		name = blog_section_date_4
+		description = Fecha
+	i18n_input
+		name = blog_section_title_4
+		description = Titulo y Resumen
+	textarea
+		name = blog_article_4
+	i18n_input
+		name = blog_section_link_4
+		description = Link al blog
+	title
+		title = Seccion Instagram
+	checkbox
+		name = show_insta
+		description = Mostrar Seccion
+	collapse
+		title = Carrusel de productos
+		backto = home_order_position
+	description
+		description = Podés destacar los productos que quieras en la página de inicio.
+	subtitle
+		subtitle = Titulo de productos destacados
+	textarea
+		name = home_carrousel_products_title
+	dropdown
+		name = home_carrousel_products
+		description = Listas de productos
+		values
+			primary = Productos destacados
+			secundary = Todos los productos
+	subtitle
+		subtitle = <a target='_blank' href='/admin/themes/settings/product_order/'>Elegí cuáles vas a destacar</a>
+	collapse
+		title = Reseñas
+		backto = home_order_position
+	subtitle
+		subtitle = Titulo de seccion
+	textarea
+		name =	reviews_section_title
+	subtitle
+		subtitle = Reseña 1
+	checkbox
+		name = review_01_show
+		description = Mostrar reseña
+	i18n_input
+		name = review_name_1
+		description = Nombre del usuario
+	i18n_input
+		name = review_city_1
+		description = Ciudad
+	textarea
+		name = review_1
+		description = Reseña
+	subtitle
+		subtitle = Reseña 2
+	checkbox
+		name = review_02_show
+		description = Mostrar reseña
+	i18n_input
+		name = review_name_2
+		description = Nombre del usuario
+	i18n_input
+		name = review_city_2
+		description = Ciudad
+	textarea
+		name = review_2
+		description = Reseña
+	subtitle
+		subtitle = Reseña 3
+	checkbox
+		name = review_03_show
+		description = Mostrar reseña
+	i18n_input
+		name = review_name_3
+		description = Nombre del usuario
+	i18n_input
+		name = review_city_3
+		description = Ciudad
+	textarea
+		name = review_3
+		description = Reseña
+	subtitle
+		subtitle = Reseña 4
+	checkbox
+		name = review_04_show
+		description = Mostrar reseña
+	i18n_input
+		name = review_name_4
+		description = Nombre del usuario
+	i18n_input
+		name = review_city_4
+		description = Ciudad
+	textarea
+		name = review_4
+		description = Reseña
+	subtitle
+		subtitle = Reseña 5
+	checkbox
+		name = review_05_show
+		description = Mostrar reseña
+	i18n_input
+		name = review_name_5
+		description = Nombre del usuario
+	i18n_input
+		name = review_city_5
+		description = Ciudad
+	textarea
+		name = review_5
+		description = Reseña
+	subtitle
+		subtitle = Reseña 6
+	checkbox
+		name = review_06_show
+		description = Mostrar reseña
+	i18n_input
+		name = review_name_6
+		description = Nombre del usuario
+	i18n_input
+		name = review_city_6
+		description = Ciudad
+	textarea
+		name = review_6
+		description = Reseña
+	collapse
+		title = Pop-up promocional
+		backto = home_order_position
+	checkbox
+		name = home_promotional_popup
+		description = Mostrar pop-up
+	subtitle
+		subtitle = Imagen para el pop-up
+	image
+		original = home_popup_image.jpg
+		title = Cargar imagen (JPG, GIF, PNG)
+	subtitle
+		subtitle = Frase motivadora para el pop-up
+	i18n_input
+		name = home_popup_txt
+	i18n_input
+		name = home_popup_url
+		description = Link (Opcional)
+	subtitle
+		subtitle = Newsletter
+	checkbox
+		name = home_news_box
+		description = Permitir que tus clientes se registren para recibir novedades desde el pop-up (Opcional)
+	collapse
+		title = Página de inicio
+		backto = _top
+	section_order
+		name = home_order_position
+		start_index = 0
+		sections
+			slider = Carrusel de imágenes
+			welcome = Carrucel de marcas
+			products = Productos destacados
+			informatives = Garantias
+			categories = Banners de productos
+			modules = Blog y Instagram
+			video = Reseñas
+			instafeed = Carrusel de productos
+	link
+		text = Pop-up promocional
+		linkto = home_promotional_popup
+
+Listado de productos
+	meta
+		icon = list-ul
+		advanced = true
+	title
+		title = Filtros
+	subtitle
+		subtitle = <span class='js-description-html'><strong>Configurá los filtros</strong> de tu tienda desde <a target='_blank' href='/admin/v2/filters' class='font-bold'>el administrador</a></span>
+	title
+    title = Productos en el listado
+	dropdown
+		name = category_quantity_products
+		description = Cantidad de productos por página
+		values
+			4 = 4
+			12 = 12
+			16 = 16
+			20 = 20
+			24 = 24
+
+Detalle de producto
+	meta
+		icon = cube
+		advanced = true
+	title
+		title = Variantes del producto
+	checkbox
+		name = bullet_variants
+		description = Mostrar como botones
+	title
+		title = Metodos de pago
+	image
+		original = product_payment_1.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (Alt)
+		name = product_payment_1_alt
+	image
+		original = product_payment_2.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (Alt)
+		name = product_payment_2_alt
+	image
+		original = product_payment_3.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (Alt)
+		name = product_payment_3_alt
+	image
+		original = product_payment_4.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (Alt)
+		name = product_payment_4_alt
+	title
+		title = Envio gratis
+	i18n_input
+		description = Etiqueta de Envio Gratis
+		name = product_free_shiping
+	title
+		title = Productos relacionados
+	i18n_input
+		description = Título para los productos alternativos
+		name = products_related_title
+	title
+		title = Seccion "¿Por que?"
+	i18n_input
+		description = Titulo de la seccion
+		name = products_why_title
+	subtitle
+		subtitle = Razon 1
+	image
+		original = why1.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Descripcion
+		name = razon_1
+	subtitle
+		subtitle = Razon 2
+	image
+		original = why2.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Descripcion
+		name = razon_2
+	subtitle
+		subtitle = Razon 3
+	image
+		original = why3.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Descripcion
+		name = razon_3
+	subtitle
+		subtitle = Razon 4
+	image
+		original = why4.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Descripcion
+		name = razon_4
+	title
+		title = Seccion "Marcas"
+	i18n_input
+		description = Titulo de la seccion
+		name = products_brands_title
+	subtitle
+		subtitle = Marca 1
+	checkbox
+		name = show_product_brand_1
+		description = Mostrar Marca
+	image
+		original = product_brand_1.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_1_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_1
+	subtitle
+		subtitle = Marca 2
+	checkbox
+		name = show_product_brand_2
+		description = Mostrar Marca
+	image
+		original = product_brand_2.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_2_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_2
+	subtitle
+		subtitle = Marca 3
+	checkbox
+		name = show_product_brand_3
+		description = Mostrar Marca
+	image
+		original = product_brand_3.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_3_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_3
+	subtitle
+		subtitle = Marca 4
+	checkbox
+		name = show_product_brand_4
+		description = Mostrar Marca
+	image
+		original = product_brand_4.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_4_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_4
+	subtitle
+		subtitle = Marca 5
+	checkbox
+		name = show_product_brand_5
+		description = Mostrar Marca
+	image
+		original = product_brand_5.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_5_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_5
+	subtitle
+		subtitle = Marca 6
+	checkbox
+		name = show_product_brand_6
+		description = Mostrar Marca
+	image
+		original = product_brand_6.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_6_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_6
+	subtitle
+		subtitle = Marca 7
+	checkbox
+		name = show_product_brand_7
+		description = Mostrar Marca
+	image
+		original = product_brand_7.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_7_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_7
+	subtitle
+		subtitle = Marca 8
+	checkbox
+		name = show_product_brand_8
+		description = Mostrar Marca
+	image
+		original = product_brand_8.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_8_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_8
+	subtitle
+		subtitle = Marca 9
+	checkbox
+		name = show_product_brand_9
+		description = Mostrar Marca
+	image
+		original = product_brand_9.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_9_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_9
+	subtitle
+		subtitle = Marca 10
+	checkbox
+		name = show_product_brand_10
+		description = Mostrar Marca
+	image
+		original = product_brand_10.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_10_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_10
+	subtitle
+		subtitle = Marca 11
+	checkbox
+		name = show_product_brand_11
+		description = Mostrar Marca
+	image
+		original = product_brand_11.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_11_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_11
+	subtitle
+		subtitle = Marca 12
+	checkbox
+		name = show_product_brand_12
+		description = Mostrar Marca
+	image
+		original = product_brand_12.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_12_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_12
+	subtitle
+		subtitle = Marca 13
+	checkbox
+		name = show_product_brand_13
+		description = Mostrar Marca
+	image
+		original = product_brand_13.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_13_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_13
+	subtitle
+		subtitle = Marca 14
+	checkbox
+		name = show_product_brand_14
+		description = Mostrar Marca
+	image
+		original = product_brand_14.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_14_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_14
+	subtitle
+		subtitle = Marca 15
+	checkbox
+		name = show_product_brand_15
+		description = Mostrar Marca
+	image
+		original = product_brand_15.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_15_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_15
+	subtitle
+		subtitle = Marca 16
+	checkbox
+		name = show_product_brand_16
+		description = Mostrar Marca
+	image
+		original = product_brand_16.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_16_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_16
+	subtitle
+		subtitle = Marca 17
+	checkbox
+		name = show_product_brand_17
+		description = Mostrar Marca
+	image
+		original = product_brand_17.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_17_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_17
+	subtitle
+		subtitle = Marca 18
+	checkbox
+		name = show_product_brand_18
+		description = Mostrar Marca
+	image
+		original = product_brand_18.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		description = Texto alternativo (alt)
+		name = product_brand_18_alt
+	i18n_input
+		description = Link de la marca
+		name = product_brand_link_18
+
+Carrito de compras
+	meta
+		icon = shopping-cart
+		advanced = true
+	title
+		title = Carrito de compras rápidas
+	checkbox
+		name = ajax_cart
+		description = Permitir que tus clientes agreguen productos al carrito sin necesidad de ir a otra página
+	title
+		title = Recomendaciones de productos
+	checkbox
+		name = add_to_cart_recommendations
+		description = Sugerir productos complementarios al agregar uno al carrito de compras rápidas
+
+Blog
+	meta
+		icon = file
+		advanced = true
+	title
+		title = Banner
+	i18n_input
+		name = blog_title
+		description = Nombre del blog
+	textarea
+		name = blog_page_description
+		description = "Descripción"
+	title
+		title = Blogs recomendados
+	subtitle
+		subtitle = Articulo 1
+	checkbox
+		name = show_recomended_article_1
+		description = Mostrar Articulo
+	image
+		original = recomended_article_1.jpg
+    	title = Cargar imagen (JPG, PNG)
+    	width = 600
+	i18n_input
+		name = blog_recomended_date_1
+		description = Fecha
+	i18n_input
+		name = blog_recomended_title_1
+		description = Titulo y Resumen
+	textarea
+		name = blog_recomended_article_1
+	i18n_input
+		name = blog_recomended_link_1
+		description = Link al blog
+	subtitle
+		subtitle = Articulo 2
+	checkbox
+		name = show_recomended_article_2
+		description = Mostrar Articulo
+	image
+		original = recomended_article_2.jpg
+    	title = Cargar imagen (JPG, PNG)
+    	width = 600
+	i18n_input
+		name = blog_recomended_date_2
+		description = Fecha
+	i18n_input
+		name = blog_recomended_title_2
+		description = Titulo y Resumen
+	textarea
+		name = blog_recomended_article_2
+	i18n_input
+		name = blog_recomended_link_2
+		description = Link al blog
+	
+
+Pie de página
+	meta
+		icon = arrow-down
+		advanced = true
+	title
+		title = Logo
+	image
+		original = logo_footer.jpg
+		title = Cargar imagen (JPG, PNG)
+	title
+		title = Menúes
+	subtitle
+		subtitle = Menu 1
+	i18n_input
+		name = menu_1_name
+		description = Titulo del menu
+	menu
+		name = footer_menu_1
+		description = Selecciona un menu para la primera columna
+	subtitle
+		subtitle = Menu 2
+	i18n_input
+		name = menu_2_name
+		description = Titulo del menu
+	menu
+		name = footer_menu_2
+		description = Selecciona un menu para la segunda columna
+	subtitle
+		subtitle = Menu 3
+	i18n_input
+		name = menu_3_name
+		description = Titulo del menu
+	menu
+		name = footer_menu_3
+		description = Selecciona un menu para la primera columna
+	title
+		title = Redes sociales 
+	i18n_input
+		name = tiktok_url
+		description = Url TikTok
+	i18n_input
+		name = instagram_url
+		description = Url Instagram
+	i18n_input
+		name = facebook_url
+		description = Url Facebook
+	title
+		title = Suscripción al newsletter desde el footer
+	i18n_input
+		name = news_title
+		description = Elegí el título para la sección 'Newsletter' en el footer
+	i18n_input
+		name = news_text
+		description = ¡Escribí algo para que tus clientes se suscriban a tu newsletter!
+	title
+		title = Medios de pago
+	image
+		original = pago1.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		name = pago1_alt
+		description = Texto alternativo (alt)
+	image
+		original = pago2.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		name = pago2_alt
+		description = Texto alternativo (alt)
+	image
+		original = pago3.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		name = pago3_alt
+		description = Texto alternativo (alt)
+	image
+		original = pago4.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		name = pago4_alt
+		description = Texto alternativo (alt)
+	image
+		original = pago5.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		name = pago5_alt
+		description = Texto alternativo (alt)
+	image
+		original = pago6.jpg
+		title = Cargar imagen (JPG, PNG)
+	i18n_input
+		name = pago6_alt
+		description = Texto alternativo (alt)
+
+Edición avanzada de CSS
+	meta
+		icon = code
+		advanced = true
+	title
+		title = Para diseñadores web
+	css_code
+		name = css_code
+		description = Acá podes escribir código CSS para que se muestre en tu tienda
+	subtitle
+		subtitle = <a target='_blank' href='https://ayuda.tiendanube.com/es_ES/123225-edicion-avanzada-de-css/como-editar-el-diseno-con-codigo-css'>¿Cómo edito el código CSS de mi tienda?</a>
