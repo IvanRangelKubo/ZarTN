@@ -30,6 +30,10 @@
         height: auto !important;
     }
 
+    .w-dropdown-link.w--current {
+        color: inherit;
+    }
+
 </style>
 
 {% if not settings.head_fix %}
