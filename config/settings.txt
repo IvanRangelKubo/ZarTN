@@ -339,100 +339,40 @@ Página de inicio
 	subtitle
 		subtitle = <a target='_blank' href='/admin/themes/settings/product_order/'>Elegí cuáles vas a destacar</a>
 	collapse
-		title = Blog y Instagram
+		title = Videos
 		backto = home_order_position
 	i18n_input
-		name = blog_section_title
-		description = Titulo de seccion
-	subtitle
-		subtitle = Descripcion
+		name = videos_title
+		description = Titulo de la seccion
 	textarea
-		name = blog_description
-	subtitle
-		subtitle = Articulo 1
-	checkbox
-		name = show_article_1
-		description = Mostrar Articulo
-	image
-		original = article_1.jpg
-    title = Cargar imagen (JPG, PNG)
-    width = 600
+		name = videos_description
+		description = Descripcion
 	i18n_input
-		name = blog_section_date_1
-		description = Fecha
+		 name = videos_button_name
+		 description = Texto del boton
 	i18n_input
-		name = blog_section_title_1
-		description = Titulo y Resumen
-	textarea
-		name = blog_article_1
-	i18n_input
-		name = blog_section_link_1
-		description = Link al blog
-	subtitle
-		subtitle = Articulo 2
-	checkbox
-		name = show_article_2
-		description = Mostrar Articulo
-	image
-		original = article_2.jpg
-    title = Cargar imagen (JPG, PNG)
-    width = 600
-	i18n_input
-		name = blog_section_date_2
-		description = Fecha
-	i18n_input
-		name = blog_section_title_2
-		description = Titulo y Resumen
-	textarea
-		name = blog_article_2
-	i18n_input
-		name = blog_section_link_2
-		description = Link al blog
-	subtitle
-		subtitle = Articulo 3
-	checkbox
-		name = show_article_3
-		description = Mostrar Articulo
-	image
-		original = article_3.jpg
-    title = Cargar imagen (JPG, PNG)
-    width = 600
-	i18n_input
-		name = blog_section_date_3
-		description = Fecha
-	i18n_input
-		name = blog_section_title_3
-		description = Titulo y Resumen
-	textarea
-		name = blog_article_3
-	i18n_input
-		name = blog_section_link_3
-		description = Link al blog
-	subtitle
-		subtitle = Articulo 4
-	checkbox
-		name = show_article_4
-		description = Mostrar Articulo
-	image
-		original = article_4.jpg
-    title = Cargar imagen (JPG, PNG)
-    width = 600
-	i18n_input
-		name = blog_section_date_4
-		description = Fecha
-	i18n_input
-		name = blog_section_title_4
-		description = Titulo y Resumen
-	textarea
-		name = blog_article_4
-	i18n_input
-		name = blog_section_link_4
-		description = Link al blog
+		name = videos_link
+		description = Link del boton
 	title
-		title = Seccion Instagram
-	checkbox
-		name = show_insta
-		description = Mostrar Seccion
+		title = Video 1
+	i18n_input
+		name = video_1_title
+		description = Titulo del video
+	i18n_input
+		name = video_1_link
+		description = Link del video
+	description
+		description = El Link del vieo debe tener la siguiente estructura: "https://www.youtube.com/embed/"
+	title
+		title = Video 2
+	i18n_input
+		name = video_2_title
+		description = Titulo del video
+	i18n_input
+		name = video_2_link
+		description = Link del video
+	description
+		description = El Link del vieo debe tener la siguiente estructura: "https://www.youtube.com/embed/"
 	collapse
 		title = Carrusel de productos
 		backto = home_order_position
@@ -569,7 +509,7 @@ Página de inicio
 			products = Productos destacados
 			informatives = Garantias
 			categories = Informacion sobre producto
-			modules = Blog y Instagram
+			modules = Videos
 			video = Reseñas y Newsletter
 			instafeed = Carrusel de productos
 	link

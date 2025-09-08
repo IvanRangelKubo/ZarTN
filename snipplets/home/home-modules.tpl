@@ -1,142 +1,30 @@
-  <div class="seccbloghome">
-    <div class="customcontainer">
-      <div id="w-node-c8c2c54b-7f5a-f016-123d-5f2b9057b293-40132ca6" class="w-layout-layout stackbloghome wf-layout-layout">
+  <div class="seccvideos">
+    <div class="custom-container">
+      <div id="w-node-_6a35c72b-370b-e50f-7f37-31302a9e5232-73a6d4f2" class="w-layout-layout stackvideos wf-layout-layout">
         
-        <div class="w-layout-cell cellintroblog">
-
-          <div class="secctitles">
-            <h2 class="maintitle">{{ settings.blog_section_title }}</h2>
-            <div class="linetitle"></div>
+        <div class="w-layout-cell cellinfovid">
+          <div class="infovideo">
+            <div class="contenedor-titulos left">
+              <h6 class="titlesecc white">{{ settings.videos_title }}</h6>
+              <img src="{{ "images/title_decoration.svg" | static_url }}" class="icon_titles">
+            </div>
+            <p class="txtvideos">{{ settings.videos_description }}</p>
+            <a href="{{ settings.videos_link }}" class="vermasbtn w-button">{{ settings.videos_button_name }}</a>
           </div>
-
-          <p class="introblog">{{ settings.blog_description }}</p>
-          <a href="/blog" class="comprarbtn blog w-button">Ver Blog</a>
-          
         </div>
 
-        <div class="w-layout-cell">
-          <div data-delay="5000" data-animation="slide" class="blogslider w-slider" data-autoplay="true" data-easing="ease-in-out" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="600" data-infinite="true">
-            
-            <div class="maskblog w-slider-mask">
+        <div class="w-layout-cell cellvideo">
+          <div style="padding-top:56.17021276595745%" class="w-embed-youtubevideo">
+            <iframe src="{{ settings.video_1_link }}" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen="" title="{{ settings.video_1_title }}"></iframe>
+          </div>
+        </div>
 
-              {% if settings.show_article_1 %}
-                <div class="entryslide w-slide">
-                  <div class="entrycont">
-                    <div id="w-node-_25b0f977-cabd-95db-18f5-b9697890f21e-40132ca6" class="w-layout-layout stackentry wf-layout-layout">
-
-                      <div class="w-layout-cell imgcellentry">
-                        <div class="imgentrydiv"  style="background-image:url({{ "article_1.jpg" | static_url }})"></div>
-                      </div>
-
-                      <div class="w-layout-cell">
-                        <div class="infominblog">
-                          <div class="dateentryblog">{{ settings.blog_section_date_1 }}</div>
-                          <h5 class="titleentry">{{ settings.blog_section_title_1 }}</h5>
-                          <p class="excerptblog">{{ settings.blog_article_1 }}</p>
-                          <a href="{{ settings.blog_section_link_1 }}" class="readmoreblog">Leer más</a>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              {% endif %}
-
-              {% if settings.show_article_2 %}
-                <div class="entryslide w-slide">
-                  <div class="entrycont">
-                    <div id="w-node-_25b0f977-cabd-95db-18f5-b9697890f21e-40132ca6" class="w-layout-layout stackentry wf-layout-layout">
-
-                      <div class="w-layout-cell imgcellentry">
-                        <div class="imgentrydiv"  style="background-image:url({{ "article_2.jpg" | static_url }})"></div>
-                      </div>
-
-                      <div class="w-layout-cell">
-                        <div class="infominblog">
-                          <div class="dateentryblog">{{ settings.blog_section_date_2 }}</div>
-                          <h5 class="titleentry">{{ settings.blog_section_title_2 }}</h5>
-                          <p class="excerptblog">{{ settings.blog_article_2 }}</p>
-                          <a href="{{ settings.blog_section_link_2 }}" class="readmoreblog">Leer más</a>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              {% endif %}
-
-              {% if settings.show_article_3 %}
-                <div class="entryslide w-slide">
-                  <div class="entrycont">
-                    <div id="w-node-_25b0f977-cabd-95db-18f5-b9697890f21e-40132ca6" class="w-layout-layout stackentry wf-layout-layout">
-
-                      <div class="w-layout-cell imgcellentry">
-                        <div class="imgentrydiv"  style="background-image:url({{ "article_3.jpg" | static_url }})"></div>
-                      </div>
-
-                      <div class="w-layout-cell">
-                        <div class="infominblog">
-                          <div class="dateentryblog">{{ settings.blog_section_date_3 }}</div>
-                          <h5 class="titleentry">{{ settings.blog_section_title_3 }}</h5>
-                          <p class="excerptblog">{{ settings.blog_article_3 }}</p>
-                          <a href="{{ settings.blog_section_link_3 }}" class="readmoreblog">Leer más</a>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              {% endif %}
-
-              {% if settings.show_article_4 %}
-                <div class="entryslide w-slide">
-                  <div class="entrycont">
-                    <div id="w-node-_25b0f977-cabd-95db-18f5-b9697890f21e-40132ca6" class="w-layout-layout stackentry wf-layout-layout">
-
-                      <div class="w-layout-cell imgcellentry">
-                        <div class="imgentrydiv"  style="background-image:url({{ "article_4.jpg" | static_url }})"></div>
-                      </div>
-
-                      <div class="w-layout-cell">
-                        <div class="infominblog">
-                          <div class="dateentryblog">{{ settings.blog_section_date_4 }}</div>
-                          <h5 class="titleentry">{{ settings.blog_section_title_4 }}</h5>
-                          <p class="excerptblog">{{ settings.blog_article_4 }}</p>
-                          <a href="{{ settings.blog_section_link_4 }}" class="readmoreblog">Leer más</a>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              {% endif %}
-
-            </div>
-
-
-            <div class="arrowslider hiddenmobile w-slider-arrow-left">
-              <div class="iconslidermain w-icon-slider-left"></div>
-            </div>
-            <div class="arrowslider hiddenmobile w-slider-arrow-right">
-              <div class="iconslidermain w-icon-slider-right"></div>
-            </div>
-            <div class="navblog w-slider-nav w-slider-nav-invert w-round"></div>
-
+        <div class="w-layout-cell cellvideo">
+          <div style="padding-top:56.17021276595745%" class="w-embed-youtubevideo">
+            <iframe src="{{ settings.video_2_link }}" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen="" title="{{ settings.video_2_title }}"></iframe>
           </div>
         </div>
 
       </div>
     </div>
   </div>
-
-
-{% if settings.show_insta %}
-  <div class="seccinstagram">
-    <div class="customcontainer">
-      <div class="secctitles">
-        <h2 class="maintitle center">Síguenos @amieworldmx</h2>
-      </div>
-      <div class="instascriptcont w-embed"></div>
-    </div>
-  </div>
-{% endif %}
