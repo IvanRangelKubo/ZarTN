@@ -12,8 +12,8 @@
 		{% block page_header_text %}{{ category.name }}{% endblock page_header_text %}
 	{% endembed %}
 
-	<section class="productslist">
-		<div class="customcontainer">
+	<section class="seccinterna">
+		<div class="custom-container">
 
 			<div class="js-category-controls-prev category-controls-sticky-detector"></div>
 			<div class="js-category-controls row align-items-center mb-md-3 category-controls categoryFilters">
@@ -66,9 +66,9 @@
 				</div>
 				{% include 'snipplets/grid/pagination.tpl' with { infinite_scroll: false } %}
 			{% else %}
-				<div class="not-found-div">
-					<img alt="Not found Icon" src="{{ 'images/notfount_icon.svg' | static_url }}" class="imgsearch">
-					<h2 class="no-reults-txt">LO SENTIMOS<br>Tu búsqueda no produjo ningún resultado intenta nuevamente con otra palabra.</h2>
+				<div class="notfounddiv">
+					<div class="notfoundicon">:(</div>
+					<h3 class="title-notfounddiv"><strong class="notfoundtxt">Lo sentimos</strong><br>Tu búsqueda no produjo ningún resultado, intenta nuevamente con otra palabra.</h3>
 				</div>
 			{% endif %}
 			<!-- Products -->
