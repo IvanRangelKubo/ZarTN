@@ -451,7 +451,7 @@ Página de inicio
 	subtitle
 		subtitle = <a target='_blank' href='/admin/themes/settings/product_order/'>Elegí cuáles vas a destacar</a>
 	collapse
-		title = Reseñas
+		title = Reseñas y Newsletter
 		backto = home_order_position
 	subtitle
 		subtitle = Titulo de seccion
@@ -465,9 +465,6 @@ Página de inicio
 	i18n_input
 		name = review_name_1
 		description = Nombre del usuario
-	i18n_input
-		name = review_city_1
-		description = Ciudad
 	textarea
 		name = review_1
 		description = Reseña
@@ -479,9 +476,6 @@ Página de inicio
 	i18n_input
 		name = review_name_2
 		description = Nombre del usuario
-	i18n_input
-		name = review_city_2
-		description = Ciudad
 	textarea
 		name = review_2
 		description = Reseña
@@ -493,9 +487,6 @@ Página de inicio
 	i18n_input
 		name = review_name_3
 		description = Nombre del usuario
-	i18n_input
-		name = review_city_3
-		description = Ciudad
 	textarea
 		name = review_3
 		description = Reseña
@@ -507,9 +498,6 @@ Página de inicio
 	i18n_input
 		name = review_name_4
 		description = Nombre del usuario
-	i18n_input
-		name = review_city_4
-		description = Ciudad
 	textarea
 		name = review_4
 		description = Reseña
@@ -521,9 +509,6 @@ Página de inicio
 	i18n_input
 		name = review_name_5
 		description = Nombre del usuario
-	i18n_input
-		name = review_city_5
-		description = Ciudad
 	textarea
 		name = review_5
 		description = Reseña
@@ -535,12 +520,20 @@ Página de inicio
 	i18n_input
 		name = review_name_6
 		description = Nombre del usuario
-	i18n_input
-		name = review_city_6
-		description = Ciudad
 	textarea
 		name = review_6
 		description = Reseña
+	title
+		title = Seccion Newsletter
+	checkbox
+		name = show_newsletter
+		description = Mostrar formulario del Newsletter
+	i18n_input
+		name = news_title
+		description = Titulo del Newsletter
+	textarea
+		name = news_text
+		description = Descripcion del formulario
 	collapse
 		title = Pop-up promocional
 		backto = home_order_position
@@ -577,7 +570,7 @@ Página de inicio
 			informatives = Garantias
 			categories = Informacion sobre producto
 			modules = Blog y Instagram
-			video = Reseñas
+			video = Reseñas y Newsletter
 			instafeed = Carrusel de productos
 	link
 		text = Pop-up promocional

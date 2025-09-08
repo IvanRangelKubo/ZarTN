@@ -77,3 +77,9 @@
 
     </div>
   </div>
+
+  {% if settings.show_newsletter  %}
+
+    {% include "snipplets/newsletter.tpl" %}
+
+  {% endif %}

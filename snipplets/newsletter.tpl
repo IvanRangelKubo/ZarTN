@@ -1,27 +1,24 @@
-{% set newsletter_contact_error = contact.type == 'newsletter' and not contact.success %}
-
-    {% if settings.news_title %}
-        <h6 class="titlenews">{{ settings.news_title }}</h6>
-    {% endif %}
-
-    {% if settings.news_text %}
-        <p class="pnews">{{ settings.news_text }}</p>
-    {% endif %}
+{% set newsletter_contact_error = contact.type == 'newsletter' and not contact.success %}    
     
-    
-    <div class="js-newsletter newsletter section-footer newsformulario w-form">
-        <form class="suscribenews" method="post" action="/winnie-pooh" onsubmit="this.setAttribute('action', '');" data-store="newsletter-form" >
-            
-            <div class="itemsnews">
-                <input type="email" id="email" autocorrect="off" autocapitalize="off" name="email" class="mailsucribinput w-input" placeholder="Escribe tu correo aquí" raria-label="Correo electrónico" required="">
-                <input type="submit" name="contact" class="suscribirbtn w-button" value='{{ "SUSCRIBIRME" | translate }}' >
+  <div class="seccnews">
+    <div class="custom-container">
+      <div class="js-newsletter formnews w-form">
+
+        <form class="formnewsletter" method="post" action="/winnie-pooh" onsubmit="this.setAttribute('action', '');" data-store="newsletter-form" >
+          <div class="elementsform">
+
+            <div class="titulo-news-cont">
+                {{ settings.news_title | raw }}
             </div>
 
-            <label class="w-checkbox accept-tyc">
-                <div class="w-checkbox-input w-checkbox-input--inputType-custom termscheckbopx"></div>
-                <input type="checkbox" name="Checkbox" id="Checkbox" data-name="Checkbox" required="" style="opacity:0;position:absolute;z-index:-1" oninvalid="this.setCustomValidity('Marque esta casilla si desea continuar')" oninput="this.setCustomValidity('')" >
-                <span class="labelcheck-tyc w-form-label" for="Checkbox">Al suscribirte aceptas el <a href="/pages/aviso-de-privacidad" target="_blank" class="tycregister-labellink"> Aviso de privacidad.</a></span>
-            </label>
+            <div class="labelnews">
+                {{ settings.news_text }}
+            </div>
+
+            <div class="inputybtn">
+                <input type="email" id="email" autocorrect="off" autocapitalize="off" name="email" class="campo-correo w-input" placeholder="Escribe aquí tu email" raria-label="Correo electrónico" required="">
+                <input type="submit" name="contact" class="suscribir-btn w-button" value='{{ "Suscribirme" | translate }}' >
+            </div>
 
             <div class="winnie-pooh" style="display: none;">
                 <label for="winnie-pooh-newsletter">{{ "No completar este campo" | translate }}</label>
@@ -31,6 +28,16 @@
             <input type="hidden" name="message" value="{{ "Pedido de inscripción a newsletter" | translate }}" />
             <input type="hidden" name="type" value="newsletter" /> 
 
+          </div>
         </form>
+
+      </div>
     </div>
+  </div>
+
+<style>
+    .campo-correo {
+        color: black;
+    }
+</style>
 
