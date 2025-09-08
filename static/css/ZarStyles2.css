@@ -4334,10 +4334,6 @@ textarea.w-select {
   position: absolute;
 }
 
-.imgfront:hover {
-  opacity: 0;
-}
-
 .cellinfocomo {
   justify-content: center;
   align-items: center;

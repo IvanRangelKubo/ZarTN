@@ -23,6 +23,6 @@
 			</div>
 		</div>
 {% else %}
-	<img src="{{ 'images/placeholder_amieworld.webp' | static_url }}" alt="{{ product.name }}">
+	<img src="{{ 'images/placeholder-zar.jpg' | static_url }}" alt="{{ product.name }}">
 {% endif %}
 

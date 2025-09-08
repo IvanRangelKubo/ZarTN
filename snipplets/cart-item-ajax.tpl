@@ -11,7 +11,7 @@
       {% if has_real_image %}
         <img src="{{ item.featured_image | product_image_url('medium') }}" class="img-fluid" />
       {% else %}
-        <img src="{{ 'images/placeholder_amieworld.webp' | static_url }}" class="img-fluid" />
+        <img src="{{ 'images/placeholder-zar.jpg' | static_url }}" class="img-fluid" />
       {% endif %}
       
     </a>

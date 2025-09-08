@@ -27,7 +27,7 @@
 
         <div class="item-image mb-2 contimgproducto">
             {% if not product.has_stock %}
-                  <div class="etiquetas-prod">AGOTADO</div>
+                  <div class="etiquetas-prod agotado">AGOTADO</div>
             {% endif %}
             {% if product.compare_at_price > product.price %}
                 <div class="etiquetas-prod oferta">-{{ (((product.compare_at_price - product.price) * 100) / product.compare_at_price) | round(0, 'floor') }}%</div>
@@ -51,23 +51,9 @@
                         style="background-image:url({{ featured_url }})"></div>
                   {% else %}
                     <div class="imgfront {% if product.images_count > 1 %}hoverOn{% endif %}"
-                        style="background-image:url({{ 'images/placeholder_amieworld.webp' | static_url }})"></div>
+                        style="background-image:url({{ 'images/placeholder-zar.jpg' | static_url }})"></div>
                   {% endif %}
                 </a>
-                {% if product.available and not product.variations %}
-                  <form class="js-product-form" method="post" action="{{ store.cart_url }}">
-                    <input type="hidden" name="add_to_cart" value="{{ product.id }}" />
-                    <input type="hidden" name="quantity" value="1" />
-
-                    <button type="submit"
-                            class="adtobag js-addtocart js-prod-submit-form"
-                            data-store="product-buy-button">
-                      <img src="{{ "images/addtobagicon.svg" | static_url }}" 
-                          alt="Agregar" 
-                          class="iconquickshop">
-                    </button>
-                  </form>
-                {% endif %}
             </div>
             
         </div>
@@ -109,13 +95,26 @@
             <a href="{{product.canonical_url}}" class="nombre-producto">{{product.name}}</a>
             <div class="precios-container">
                 {% if product.compare_at_price or product.promotional_offer %}
-                    <div class="precio-regular">{{ product.compare_at_price | money }}</div>
+                    <div class="precio-regular" style="text-decoration: line-through;">{{ product.compare_at_price | money }}</div>
                     <div class="precio-oferta">{{ product.price | money }}</div>
                 {% else %}
                     <div class="precio-regular">{{ product.price | money }}</div>
                 {% endif %}  
             </div>
         </div>
+
+        {% if product.available and not product.variations %}
+            <form class="js-product-form" method="post" action="{{ store.cart_url }}">
+                <input type="hidden" name="add_to_cart" value="{{ product.id }}" />
+                <input type="hidden" name="quantity" value="1" />
+
+                <button type="submit"
+                        class="btnadd w-button js-addtocart js-prod-submit-form"
+                        data-store="product-buy-button">
+                    COMPRAR
+                </button>
+            </form>
+        {% endif %}
 
     {% if (settings.quick_shop or settings.product_color_variants) and not reduced_item %}
         </div>

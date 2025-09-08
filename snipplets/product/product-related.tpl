@@ -65,7 +65,7 @@
                                 <div class="imgfront {% if related_product.images_count > 1 %}hoverOn{% endif %}"
                                     style="background-image:url({{ featured_url }})"></div>
                             {% else %}
-                                <div class="imgfront {% if related_product.images_count > 1 %}hoverOn{% endif %}" style="background-image:url({{ 'images/placeholder_amieworld.webp' | static_url }})"></div>
+                                <div class="imgfront {% if related_product.images_count > 1 %}hoverOn{% endif %}" style="background-image:url({{ 'images/placeholder-zar.jpg' | static_url }})"></div>
                         {% endif %}
                         </a>
 

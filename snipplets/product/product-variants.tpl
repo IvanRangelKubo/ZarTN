@@ -39,7 +39,7 @@
 							>
 								<img
 									alt="{{ option.name|e('html_attr') }}"
-									src="{{ matched_image | default('images/placeholder_amieworld.webp') }}"
+									src="{{ matched_image | default('images/placeholder-zar.jpg') }}"
 									class="picvarmin"
 								/>
 							</a>

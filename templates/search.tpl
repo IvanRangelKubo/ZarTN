@@ -12,16 +12,21 @@
 
 <section class="seccinterna">
 	<div class="custom-container">
-		{% if products %}
-			<div class="contlisting">
-				{% include 'snipplets/product_grid.tpl' %}
+		<div class="w-row">
+			<div class="w-col w-col-3"></div>
+			<div class="column-11 w-col w-col-9">
+				{% if products %}
+					<div class="contlisting">
+						{% include 'snipplets/product_grid.tpl' %}
+					</div>
+					{% include 'snipplets/grid/pagination.tpl' with { infinite_scroll: false } %}
+				{% else %}
+					<div class="notfounddiv">
+						<div class="notfoundicon">:(</div>
+						<h3 class="title-notfounddiv"><strong class="notfoundtxt">Lo sentimos</strong><br>Tu búsqueda no produjo ningún resultado, intenta nuevamente con otra palabra.</h3>
+					</div>
+				{% endif %}
 			</div>
-			{% include 'snipplets/grid/pagination.tpl' with { infinite_scroll: false } %}
-		{% else %}
-				<div class="notfounddiv">
-					<div class="notfoundicon">:(</div>
-					<h3 class="title-notfounddiv"><strong class="notfoundtxt">Lo sentimos</strong><br>Tu búsqueda no produjo ningún resultado, intenta nuevamente con otra palabra.</h3>
-				</div>
-	    {% endif %}
+		</div>
 	</div>
 </section>
