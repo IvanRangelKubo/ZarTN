@@ -7,43 +7,48 @@
     //breadcrumbs_custom_class for custom CSS classes
 #}
 
+{% set breadcrumbClass = '' %}
+{% if template != 'product' %}
+  {% set breadcrumbClass = 'white' %}
+{% endif %}
+
 {% if breadcrumbs %}
 
     <ul class="breadcrumbs listaarbol {{ breadcrumbs_custom_class }}">
 
         <li class="list-item-arbol">
-          <a href="{{ store.url }}" class="arbolcategorias white">Inicio /</a>
+          <a href="{{ store.url }}" class="arbolcategorias {{ breadcrumbClass }}">Inicio /</a>
         </li>
         
         {% if template == 'page' %}
           <li class="list-item-arbol">
-            <a href="#" class="arbolcategorias white">{{ page.name }} /</a>
+            <a href="#" class="arbolcategorias {{ breadcrumbClass }}">{{ page.name }} /</a>
           </li>
         {% elseif template == 'cart' %}
             <li class="list-item-arbol">
-              <a href="#" class="arbolcategorias white">{{ "Carrito de compras" | translate }} /</a>
+              <a href="#" class="arbolcategorias {{ breadcrumbClass }}">{{ "Carrito de compras" | translate }} /</a>
             </li>
         {% elseif template == 'search' %}
             <li class="list-item-arbol">
-              <a href="#" class="arbolcategorias white">{{ "Resultados de búsqueda" | translate }} /</a>
+              <a href="#" class="arbolcategorias {{ breadcrumbClass }}">{{ "Resultados de búsqueda" | translate }} /</a>
             </li>
 
         {% elseif template == 'account.order' %}
             <li class="list-item-arbol">
-              <a href="#" class="arbolcategorias white">{{ 'Orden {1}' | translate(order.number) }} /</a>
+              <a href="#" class="arbolcategorias {{ breadcrumbClass }}">{{ 'Orden {1}' | translate(order.number) }} /</a>
             </li>
 
         {% elseif template == 'blog' %}
             <li class="list-item-arbol">
-              <a href="#" class="arbolcategorias white">{{ 'Blog' | translate }} /</a>
+              <a href="#" class="arbolcategorias {{ breadcrumbClass }}">{{ 'Blog' | translate }} /</a>
             </li>
 
         {% elseif template == 'blog-post' %}
             <li class="list-item-arbol">
-              <a href="{{ store.blog_url }}" class="arbolcategorias white">{{ 'Blog' | translate }} /</a>
+              <a href="{{ store.blog_url }}" class="arbolcategorias {{ breadcrumbClass }}">{{ 'Blog' | translate }} /</a>
             </li>
             <li class="list-item-arbol">
-              <a href="{{ store.blog_url }}" class="arbolcategorias white">{{ post.title }} /</a>
+              <a href="{{ store.blog_url }}" class="arbolcategorias {{ breadcrumbClass }}">{{ post.title }} /</a>
             </li>
              <span class="crumb active"></span>
 
@@ -51,7 +56,7 @@
         
           {% if category.name != 'Productos' %}
               <li class="list-item-arbol">
-                <a href="/productos" class="arbolcategorias white">Catálogo /</a>
+                <a href="/productos" class="arbolcategorias {{ breadcrumbClass }}">Catálogo /</a>
               </li>
           {% endif %}
         
@@ -59,14 +64,14 @@
               {% for parent in category.parents %}
                   {% if parent.name != 'Productos' %}
                       <li class="list-item-arbol">
-                        <a href="{{ parent.url }}" class="arbolcategorias white">{{ parent.name }} /</a>
+                        <a href="{{ parent.url }}" class="arbolcategorias {{ breadcrumbClass }}">{{ parent.name }} /</a>
                       </li>
                   {% endif %}
               {% endfor %}
           {% endif %}
           
           <li class="list-item-arbol">
-            <span class="arbolcategorias white">{{ category.name }} /</span>
+            <span class="arbolcategorias {{ breadcrumbClass }}">{{ category.name }} /</span>
           </li>
 
 
@@ -75,12 +80,12 @@
             {% for crumb in breadcrumbs %}
                 {% if crumb.last %}
                     <li class="list-item-arbol">
-                      <div href="#" class="arbolcategorias white">{{ crumb.name }} /</div>
+                      <div href="#" class="arbolcategorias {{ breadcrumbClass }}">{{ crumb.name }} /</div>
                     </li>
                     
                 {% else %}
                     <li class="list-item-arbol">
-                      <a href="{{ crumb.url }}" class="arbolcategorias white">{{ crumb.name }} /</a>
+                      <a href="{{ crumb.url }}" class="arbolcategorias {{ breadcrumbClass }}">{{ crumb.name }} /</a>
                     </li>
                 {% endif %}
             {% endfor %}

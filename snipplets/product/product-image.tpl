@@ -26,3 +26,33 @@
 	<img src="{{ 'images/placeholder-zar.jpg' | static_url }}" alt="{{ product.name }}">
 {% endif %}
 
+<img loading="lazy" src="{{ "images/share-icon.svg" | static_url }}" alt="" class="shareicon" data-ix="showsocialshare">
+
+<div class="contsocial-media detalle">
+
+	<a data-network="copy" href="#" class="st-custom-button w-inline-block">
+		<img alt="Compartir" src="{{ "images/socialicon.svg" | static_url }}" class="iconshare-social">
+	</a>
+
+	<a data-network="facebook" href="#" class="st-custom-button w-inline-block">
+		<img alt="Facebook" src="{{ "images/socialicon-copy.svg" | static_url }}" class="iconshare-social">
+	</a>
+
+	<a data-network="whatsapp" href="#" class="st-custom-button w-inline-block">
+		<img alt="Whatsapp" src="{{ "images/socialicon-copy-3.svg" | static_url }}" class="iconshare-social">
+	</a>
+
+	<a data-network="telegram" href="#" class="st-custom-button w-inline-block">
+		<img alt="Telegram" src="{{ "images/socialicon-copy-5.svg" | static_url }}" class="iconshare-social">
+	</a>
+
+	<a data-network="messenger" href="#" class="st-custom-button w-inline-block">
+		<img alt="Messenger" src="{{ "images/socialicon-copy-4.svg" | static_url }}" class="iconshare-social">
+	</a>
+
+	<a data-network="twitter" href="#" class="st-custom-button w-inline-block">
+		<img alt="Twitter" src="{{ "images/icon_twitter.svg" | static_url }}" class="iconshare-social">
+	</a>
+
+</div>
+
