@@ -72,6 +72,15 @@
     margin-left: 20px;
   }
 
+  .cart-item-name > a {
+    font-size: 14px;
+}
+
+  .cart-item-subtotal {
+    font-weight: 600;
+    font-size: 17px;
+  }
+
   .form-group.float-left.form-quantity.w-auto.mb-2 {
     display: flex;
     gap: 15px;
@@ -83,7 +92,7 @@
   }
 
   .row.m-0.justify-content-md-center {
-    border: 1px solid black;
+    border: 2px solid black;
   }
 
   input.form-control.js-cart-quantity-input.cart-item-input.form-control.form-control-inline {

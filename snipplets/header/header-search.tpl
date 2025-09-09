@@ -33,10 +33,6 @@
         max-height: 240px;
     }
 
-    .js-modal-overlay.modal-overlay {
-        background: none;
-    }
-
     @media screen and (min-width: 1024px){
         .js-search-suggest.search-suggest {
             width: 70%;

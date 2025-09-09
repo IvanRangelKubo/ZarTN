@@ -136,10 +136,14 @@
             }
 
             form.js-ajax-cart-panel > .js-modal-close.js-fullscreen-modal-close.modal-header {
-                padding: 13px 15px 10px 25px !important;
-                color: #ff0065;
+                color: #C33;
+                margin-top: 0;
+                margin-bottom: 0;
+                font-family: Barlowcondensed, Verdana, sans-serif;
+                font-size: 25px;
+                font-style: italic;
                 font-weight: 600;
-                font-family: Ubuntu, Helvetica, sans-serif;
+                line-height: 28px;
             }
 
             div#modal-cart {

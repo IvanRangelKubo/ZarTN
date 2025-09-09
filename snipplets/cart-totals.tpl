@@ -257,12 +257,15 @@
   }
 
   input.btn.btn-primary.btn-block.cart-btn {
-      letter-spacing: normal;
+      letter-spacing: 1px;
       text-transform: none;
-      font-size: 16px;
-      background-color: var(--regularpink);
-      font-family: Ubuntu, Helvetica, sans-serif;
-      font-weight: 600;
+      font-size: 21px;
+      font-style: italic;
+      background-color: #c33;
+      font-family: Barlowcondensed,Verdana,sans-serif;
+      font-weight: 500;
+      line-height: 19px;
+      text-transform: uppercase;
   }
 
   h2.row.no-gutters.text-primary.mb-0 {
