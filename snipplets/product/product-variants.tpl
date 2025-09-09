@@ -4,75 +4,35 @@
 		{% set hidden_variant_select = ' d-none' %}
 	{% endif %}
 	{% for variation in product.variations %}
-
-		<div class="cont-variacion js-product-variants-group {% if variation.name in ['Color', 'Cor'] %}js-color-variants-container{% endif %} {% if settings.bullet_variants %}col-12 mb-2 text-center {% if not quickshop %}text-md-left{% endif %}{% else %}{% if loop.length == 3 %} {% if quickshop %}col-4{% else %}col-12{% endif %} col-md-4 {% elseif loop.length == 2 %} col-6 {% else %} col {% if quickshop %}col-md-12{% else %}col-md-6{% endif %}{% endif %}{% endif %}" data-variation-id="{{ variation.id }}">
-			{% embed "snipplets/forms/form-select.tpl" with{select_label: true, select_label_name: '' ~ variation.name ~ '', select_for: 'variation_' ~ loop.index , select_id: 'variation_' ~ loop.index, select_data_value: 'variation_' ~ loop.index, select_name: 'variation' ~ '[' ~ variation.id ~ ']', select_group_custom_class:hidden_variant_select, select_custom_class: 'js-variation-option js-refresh-installment-data'} %}
+		<div class="js-product-variants-group {% if variation.name in ['Color', 'Cor'] %}js-color-variants-container{% endif %} {% if settings.bullet_variants %}col-12 mb-2 text-center {% if not quickshop %}text-md-left{% endif %}{% else %}{% if loop.length == 3 %} {% if quickshop %}col-4{% else %}col-12{% endif %} col-md-4 {% elseif loop.length == 2 %} col-6 {% else %} col {% if quickshop %}col-md-12{% else %}col-md-6{% endif %}{% endif %}{% endif %}" data-variation-id="{{ variation.id }}">
+			{% embed "snipplets/forms/form-select.tpl" with{select_label: true, select_label_name: '' ~ variation.name ~ '', select_for: 'variation_' ~ loop.index , select_id: 'variation_' ~ loop.index, select_data_value: 'variation_' ~ loop.index, select_name: 'variation' ~ '[' ~ variation.id ~ ']', select_group_custom_class:hidden_variant_select, select_custom_class: 'js-variation-option js-refresh-installment-data loginreg-field w-select'} %}
 				{% block select_options %}
 					{% for option in variation.options %}
 						<option value="{{ option.id }}" {% if product.default_options[variation.id] is same as(option.id) %}selected="selected"{% endif %}>{{ option.name }}</option>
 					{% endfor %}
 				{% endblock select_options%}
 			{% endembed %}
-
 			{% if settings.bullet_variants %}
-
-				<div class="text-center {% if not quickshop %}text-md-left{% endif %}">
-					<label class="form-label mb-3 variantName">{{ variation.name }}</label>
-				</div>
-
-
-				{% set vname = variation.name | lower | trim %}
-
-				{% if vname == 'tipo de piel' %}
-
 					<div class="text-center {% if not quickshop %}text-md-left{% endif %}">
-
-						{% for option in variation.options %}
-							
-							{% set matched_image = product.images[loop.index0] | product_image_url('original') %}
-
-							<a
-								data-option="{{ option.id }}"
-								data-variation-id="{{ variation.id }}"
-								class="js-insta-variant btn btn-variant varlink w-inline-block{% if product.default_options[variation.id] is same as(option.id) %} selected{% endif %}"
-								title="{{ option.name|e('html_attr') }}"
-							>
-								<img
-									alt="{{ option.name|e('html_attr') }}"
-									src="{{ matched_image | default('images/placeholder-zar.jpg') }}"
-									class="picvarmin"
-								/>
-							</a>
-						{% endfor %}
+						<label class="form-label mb-3">{{ variation.name }}</label>
 					</div>
-
-				{% else %}
-
 					<div class="text-center {% if not quickshop %}text-md-left{% endif %}">
-						{# Con custom_data (ej. Color) #}
 						{% for option in variation.options if option.custom_data %}
-							<a data-option="{{ option.id }}" data-variation-id="{{ variation.id }}"
-								class="js-insta-variant btn btn-variant{% if product.default_options[variation.id] is same as(option.id) %} selected{% endif %}{% if variation.name in ['Color', 'Cor'] %} btn-variant-color{% endif %} varname-detail"
-								title="{{ option.name }}">
-								<span class="btn-variant-content"
-											{% if variation.name in ['Color', 'Cor'] %} style="background: {{ option.custom_data }}; border: 1px solid #eee"{% endif %}
-											data-name="{{ option.name }}">
-									{% if not(variation.name in ['Color', 'Cor']) %}{{ option.name }}{% endif %}
+							<a data-option="{{ option.id }}" class="js-insta-variant btn btn-variant{% if product.default_options[variation.id] is same as(option.id) %} selected{% endif %}{% if variation.name in ['Color', 'Cor'] %} btn-variant-color{% endif %}" title="{{ option.name }}" data-option="{{ option.id }}" data-variation-id="{{ variation.id }}">
+								<span class="btn-variant-content"{% if variation.name in ['Color', 'Cor'] %} style="background: {{ option.custom_data }}; border: 1px solid #eee"{% endif %} data-name="{{ option.name }}">
+								{% if not(variation.name in ['Color', 'Cor']) %}
+									{{ option.name }}
+								{% endif %}
 								</span>
 							</a>
 						{% endfor %}
-
 						{% for option in variation.options if not option.custom_data %}
-							<a data-option="{{ option.id }}" data-variation-id="{{ variation.id }}"
-								class="js-insta-variant btn btn-variant{% if product.default_options[variation.id] is same as(option.id) %} selected{% endif %} varname-detail">
+							<a data-option="{{ option.id }}" class="js-insta-variant btn btn-variant{% if product.default_options[variation.id] is same as(option.id) %} selected{% endif %}" data-variation-id="{{ variation.id }}">
 								<span class="btn-variant-content" data-name="{{ option.name }}">{{ option.name }}</span>
 							</a>
 						{% endfor %}
 					</div>
-				{% endif %}
 			{% endif %}
-
-
 		</div>
 		{% if variation.name in ['Talle', 'Talla', 'Tamanho', 'Size'] %}
 			{% set has_size_variations = true %}
@@ -107,30 +67,34 @@
 </div>
 
 <style>
-	.variantName {
+
+	label.form-label.mb-3 {
+			margin-bottom: 10px !important;
+	}
+
+	.btn-variant-content {
+			min-width: 50px;
+			min-height: 25px;
+			line-height: 25px;
+			font-size: 15px;
+	}
+
+	a.js-insta-variant.btn.btn-variant.selected {
+    border: 2px solid black;
+	}
+
+	.form-select-icon {
     display: none;
 	}
 
-	.btn-variant-content{
-		line-height: 6px;
+	select.form-select.js-variation-option.js-refresh-installment-data.loginreg-field.w-select {
+    appearance: auto;
+		width: 90%;
 	}
 
-	.btn-variant.selected {
-    background-color: var(--darkgrey);
-    color: var(--white);
-    border-width: 1px;
-    border-color: #245346;
-    text-decoration: none;
-	}
-
-	.varname-detail:hover {
-    background-color: var(--darkgrey);
-    color: var(--white);
-    border-color: #245346;
-	}
-
-	.picvarmin {
-    border: 2px solid white;
+	.js-product-variants.form-row {
+    display: flex;
+    flex-direction: column;
 	}
 
 </style>
