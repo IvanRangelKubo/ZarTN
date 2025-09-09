@@ -194,7 +194,7 @@
         height: 50px;
         margin-bottom: 15px;
         padding: 10px;
-        font-family: Montserrat, sans-serif;
+        font-family: Ubuntu, Helvetica, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 18px;

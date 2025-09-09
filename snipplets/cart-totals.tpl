@@ -261,20 +261,20 @@
       text-transform: none;
       font-size: 16px;
       background-color: var(--regularpink);
-      font-family: Montserrat, sans-serif;
+      font-family: Ubuntu, Helvetica, sans-serif;
       font-weight: 600;
   }
 
   h2.row.no-gutters.text-primary.mb-0 {
       font-size: 20px;
-      font-family: Montserrat, sans-serif;
+      font-family: Ubuntu, Helvetica, sans-serif;
       margin: 0;
       font-weight: 500;
   }
 
   h5.js-visible-on-cart-filled.row.no-gutters.mb-1 {
       font-size: 15px;
-      font-family: Montserrat, sans-serif;
+      font-family: Ubuntu, Helvetica, sans-serif;
       color: #454545;
       font-weight: 500;
   }

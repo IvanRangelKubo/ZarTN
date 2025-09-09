@@ -139,7 +139,7 @@
                 padding: 13px 15px 10px 25px !important;
                 color: #ff0065;
                 font-weight: 600;
-                font-family: Montserrat, sans-serif;
+                font-family: Ubuntu, Helvetica, sans-serif;
             }
 
             div#modal-cart {

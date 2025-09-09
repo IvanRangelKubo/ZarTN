@@ -54,7 +54,7 @@
 
   .cartTitle {
     font-size: 17px;
-    font-family: Montserrat, sans-serif;
+    font-family: Ubuntu, Helvetica, sans-serif;
   }
 
     .js-cart-item.cart-item.js-cart-item-shippable.form-row {
@@ -87,7 +87,7 @@
   }
 
   input.form-control.js-cart-quantity-input.cart-item-input.form-control.form-control-inline {
-      font-family: Montserrat, sans-serif;
+      font-family: Ubuntu, Helvetica, sans-serif;
       height: 32px;
       border: none;
   }

@@ -8,70 +8,83 @@
 
 {% if not show_help %}
 
-	{% embed "snipplets/page-header.tpl" with { breadcrumbs: true } %}
-		{% block page_header_text %}{{ category.name }}{% endblock page_header_text %}
-	{% endembed %}
-
 	<section class="seccinterna">
-		<div class="custom-container">
 
-			<div class="js-category-controls-prev category-controls-sticky-detector"></div>
-			<div class="js-category-controls row align-items-center mb-md-3 category-controls categoryFilters">
-				{% if products %}
-					{% set columns = settings.grid_columns %}
-					<div class="filtersCategory">
-						<span class="sortLabel">Filtrar por:</span>
-						{% if has_filters_available %}
-							<a href="#" class="js-modal-open filter-link" data-toggle="#nav-filters">
-								{{ 'Filtrar' | t }} {% include "snipplets/svg/filter.tpl" with {svg_custom_class: "icon-inline icon-w-16"} %}
-							</a>
-							{% embed "snipplets/modal.tpl" with{modal_id: 'nav-filters', modal_class: 'filters modal-docked-small', modal_position: 'left', modal_transition: 'slide', modal_width: 'full'} %}
-								{% block modal_head %}
-									{{'Filtros' | translate }}
-								{% endblock %}
-								{% block modal_body %}
-									{% if filter_categories is not empty %}
-										{% snipplet "grid/categories.tpl" %}
-									{% endif %}
-									{% if product_filters is not empty %}
-										{% snipplet "grid/filters.tpl" %}
-									{% endif %}
-									<div class="js-filters-overlay filters-overlay" style="display: none;">
-										<div class="filters-updating-message">
-											<h3 class="js-applying-filter" style="display: none;">{{ 'Aplicando filtro...' | translate }}</h3>
-											<h3 class="js-removing-filter" style="display: none;">{{ 'Borrando filtro...' | translate }}</h3>
-										</div>
-									</div>
-								{% endblock %}
-							{% endembed %}
+		{% embed "snipplets/page-header.tpl" with { breadcrumbs: true } %}
+			{% block page_header_text %}{{ category.name }}{% endblock page_header_text %}
+		{% endembed %}
+
+		<div class="custom-container">
+			<div class="w-row">
+
+				<div class="w-col w-col-3">
+					<div class="js-category-controls-prev category-controls-sticky-detector"></div>
+					<div class="js-category-controls row align-items-center mb-md-3 category-controls categoryFilters">
+						{% if products %}
+							{% set columns = settings.grid_columns %}
+							<div class="filtersCategory">
+								<span class="sortLabel">Filtrar por:</span>
+								{% if has_filters_available %}
+									<a href="#" class="js-modal-open filter-link" data-toggle="#nav-filters">
+										{{ 'Filtrar' | t }} {% include "snipplets/svg/filter.tpl" with {svg_custom_class: "icon-inline icon-w-16"} %}
+									</a>
+									{% embed "snipplets/modal.tpl" with{modal_id: 'nav-filters', modal_class: 'filters modal-docked-small', modal_position: 'left', modal_transition: 'slide', modal_width: 'full'} %}
+										{% block modal_head %}
+											{{'Filtros' | translate }}
+										{% endblock %}
+										{% block modal_body %}
+											{% if filter_categories is not empty %}
+												{% snipplet "grid/categories.tpl" %}
+											{% endif %}
+											{% if product_filters is not empty %}
+												{% snipplet "grid/filters.tpl" %}
+											{% endif %}
+											<div class="js-filters-overlay filters-overlay" style="display: none;">
+												<div class="filters-updating-message">
+													<h3 class="js-applying-filter" style="display: none;">{{ 'Aplicando filtro...' | translate }}</h3>
+													<h3 class="js-removing-filter" style="display: none;">{{ 'Borrando filtro...' | translate }}</h3>
+												</div>
+											</div>
+										{% endblock %}
+									{% endembed %}
+								{% endif %}
+							</div>
+
 						{% endif %}
 					</div>
-					<div class="sortBy">
-						<span class="sortLabel">Ordenar por:</span>
-						{% include 'snipplets/grid/sort-by.tpl' %}
+					
+
+					<!-- Filters -->
+					<div class="row ApliedFilters">
+						{% include "snipplets/grid/filters.tpl" with {applied_filters: true} %}
 					</div>
-				{% endif %}
-			</div>
-
-			<!-- Filters -->
-			<div class="row ApliedFilters">
-				{% include "snipplets/grid/filters.tpl" with {applied_filters: true} %}
-			</div>
-			<!-- Filters -->
-
-			<!-- Products -->
-			{% if products %}
-				<div class=" contlisting" data-store="category-grid-{{ category.id }}">
-					{% include 'snipplets/product_grid.tpl' %}
+					<!-- Filters -->
 				</div>
-				{% include 'snipplets/grid/pagination.tpl' with { infinite_scroll: false } %}
-			{% else %}
-				<div class="notfounddiv">
-					<div class="notfoundicon">:(</div>
-					<h3 class="title-notfounddiv"><strong class="notfoundtxt">Lo sentimos</strong><br>Tu búsqueda no produjo ningún resultado, intenta nuevamente con otra palabra.</h3>
+
+				<div class="column-11 w-col w-col-9">
+
+					<!-- Products -->
+					{% if products %}
+
+						<div class="divordenar">
+							<div class="ordenar-selector">
+								{% include 'snipplets/grid/sort-by.tpl' %}
+							</div>
+						</div>
+
+						<div class="contlisting" data-store="category-grid-{{ category.id }}">
+							{% include 'snipplets/product_grid.tpl' %}
+						</div>
+						{% include 'snipplets/grid/pagination.tpl' with { infinite_scroll: false } %}
+					{% else %}
+						<div class="notfounddiv">
+							<div class="notfoundicon">:(</div>
+							<h3 class="title-notfounddiv"><strong class="notfoundtxt">Lo sentimos</strong><br>Tu búsqueda no produjo ningún resultado, intenta nuevamente con otra palabra.</h3>
+						</div>
+					{% endif %}
+					<!-- Products -->
 				</div>
-			{% endif %}
-			<!-- Products -->
+			</div>
 		</div>
 	</section>
 	<style>
@@ -85,11 +98,10 @@
 		}
 
 		.categoryFilters {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-				align-content: center;
-				margin: 25px;
+			display: flex;
+			flex-direction: row;
+			align-content: center;
+			margin: 10px auto;
 		}
 
 		.filtersCategory {
@@ -108,32 +120,40 @@
 		.sortLabel {
 			font-size: medium;
 			font-weight: 600;
-			color: #ff6a9f;
+			color: #c33;
 		}
 
 		.sortBy > .form-group > select.form-select.js-sort-by {
 				border: none !important;
 		}
 
-		.form-group > .form-select-icon {
-				bottom: 10px;
-		}
-
-		.form-group > .form-select-icon > svg.icon-inline.icon-w-14.icon-lg.svg-icon-text {
-				width: .75em;
-		}
 
 		.filtersCategory > .js-modal-open.filter-link {
 			width: fit-content;
 			display: flex;
 			gap: 10px;
 			font-size: medium;
-			padding: 5px 15px;
-			border: 2px solid black;
+			padding: 4px 15px;
+			border: 1px solid black;
+			color: #000;
+			text-align: center;
+			font-family: Ubuntu, Helvetica, sans-serif;
+			font-size: 12px;
+			font-weight: 400;
+			align-items: center;
 		}
 
 		.ApliedFilters {
 			margin: auto !important;
+		}
+
+		.form-select-icon {
+				display: none;
+		}
+
+		select.form-select.js-sort-by.ordenar-txt {
+				padding: 0;
+				border: none;
 		}
 
 

@@ -100,7 +100,7 @@
     }
 
     input.form-control.js-cart-quantity-input.cart-item-input.form-control.form-control-inline {
-        font-family: Montserrat, sans-serif;
+        font-family: Ubuntu, Helvetica, sans-serif;
         height: 32px;
         border: none;
     }

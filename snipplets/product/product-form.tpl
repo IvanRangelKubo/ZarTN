@@ -158,7 +158,7 @@
         }
 
         .js-added-to-cart-product-message.float-leftt.w-100.mb-3.text-center.text-md-left {
-            font-family: Montserrat, sans-serif;
+            font-family: Ubuntu, Helvetica, sans-serif;
             font-size: 14px;
             font-weight: 500;
             line-height: 22px;

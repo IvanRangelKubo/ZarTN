@@ -81,10 +81,11 @@
         flex-direction: row;
         align-items: flex-start;
         gap: 10px;
+        flex-wrap: wrap;
     }
 
     button.js-remove-filter.chip {
         background: white;
-        border: 2px solid black;
+        border: 1px solid black;
     }
 </style>
