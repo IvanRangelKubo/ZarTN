@@ -1,9 +1,10 @@
-<div class="seccmicuenta" id="shoppingCartPage" data-minimum="{{ settings.cart_minimum_value }}" data-store="cart-page">
-    <div class="customcontainer">
-        <div class="contmicuenta">
-            <div class="secctitles internas">
-                <h1 class="maintitle internas">Mi carrito 🛍️</h1>
-                <div class="linetitle"></div>
+<div class="seccinterna" id="shoppingCartPage" data-minimum="{{ settings.cart_minimum_value }}" data-store="cart-page">
+    <div class="custom-container">
+        <div class="containermicuenta">
+
+            <div class="contenedor-titulos">
+            <h1 class="titlesecc">MI CARRITO</h1>
+            <img src="{{ "images/title_decoration.svg" | static_url }}" loading="lazy" alt="" class="icon_titles">
             </div>
 
             <form action="{{ store.cart_url }}" method="post" class="cart-body" data-store="cart-form" data-component="cart">
@@ -96,7 +97,7 @@
     }
 
     .row.m-0.justify-content-md-center.align-items-center {
-        border: 1px solid;
+        border: 2px solid;
     }
 
     input.form-control.js-cart-quantity-input.cart-item-input.form-control.form-control-inline {
