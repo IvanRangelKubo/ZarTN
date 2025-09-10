@@ -104,10 +104,6 @@
         font-size: 14px !important;
     }
 
-    .btnvolver:hover {
-        color: var(--darkgrey);
-    }
-
     .containershare {
         width: 240px;
     }

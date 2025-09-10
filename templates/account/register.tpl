@@ -168,8 +168,6 @@
 	}
 
 	.alert.alert-danger {
-    border: 2px solid var(--darkgrey);
-    box-shadow: 6px 6px 0 0 var(--darkgrey);
     margin: auto;
     margin-bottom: 15px;
     width: 90%;
@@ -177,8 +175,6 @@
 	}
 
 	.js-resend-validation-success.alert.alert-success {
-    border: 2px solid var(--darkgrey);
-    box-shadow: 6px 6px 0 0 var(--darkgrey);
     margin: auto;
     width: 90%;
 	}
