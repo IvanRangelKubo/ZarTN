@@ -1,13 +1,13 @@
 {# Update account info form #}
 
-<section class="seccmicuenta">
-    <div class="customcontainer">
+<section class="seccinterna">
+    <div class="custom-container">
     
-        <div class="contmicuenta">
+        <div class="containermicuenta">
 
-            <div class="secctitles internas">
-                <h1 class="maintitle internas">Edita tu informacion  🌟</h1>
-                <div class="linetitle"></div>
+            <div class="contenedor-titulos">
+                <h1 class="titlesecc">MI INFORMACION</h1>
+                <img src="{{ "images/title_decoration.svg" | static_url }}" class="icon_titles">
             </div>
 
             <div class="contbtncuenta">
@@ -20,10 +20,10 @@
                     {% embed "snipplets/forms/form.tpl" with{form_id: 'info-form',form_custom_class: 'contenidoformlog direcciones', submit_custom_class: 'loginpopbtn w-button', submit_text: 'Guardar cambios' | translate } %}
                         {% block form_body %}
 
-                            <p class="txtlogin">Aqui puedes editar tus datos personales y de contacto</p>
+                            <h2 class="titles-micuenta">EDITA TU INFORMACION</h2>
 
                             
-                            <div id="w-node-_81321b25-7b08-2026-9060-3793a1b18af7-9d49e32e" class="w-layout-layout stackdirecciones wf-layout-layout">
+                            <div id="w-node-_76e90914-a609-dbd3-664f-f91026e7cc0e-73a6d4f7" class="w-layout-layout stackdireccion wf-layout-layout">
                                 
                                 <div class="w-layout-cell">
                                     {# Name input #}
@@ -51,7 +51,7 @@
 
                             </div>
 
-                            <div id="w-node-_81321b25-7b08-2026-9060-3793a1b18afc-9d49e32e" class="w-layout-layout stackdirecciones wf-layout-layout">
+                            <div id="w-node-cdfa8c52-eeee-e4ef-b086-70ef29561187-73a6d4f7" class="w-layout-layout stackdireccion wf-layout-layout">
                                 <div class="w-layout-cell">
                                     {# Phone input #}
                                     {% embed "snipplets/forms/form-input.tpl" with{type_tel: true,input_placeholder: 'Teléfono*', input_for: 'phone',input_custom_class: 'loginreg-field w-input', input_value: result.phone | default(customer.phone), input_name: 'phone', input_id: 'phone' } %}
