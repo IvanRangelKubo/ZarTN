@@ -92,24 +92,5 @@
         text-transform: none;
         margin-top: 0;
     }
-
-    .alert.alert-danger {
-        margin: auto;
-        margin-bottom: 15px;
-        width: 90%;
-        color: crimson;
-    }
-
-    .alert.alert-danger {
-        margin: auto;
-        margin-bottom: 15px;
-        width: 90%;
-        color: crimson;
-    }
-
-    .alert.alert-success {
-        margin: auto;
-        width: 90%;
-    }
     
 </style>

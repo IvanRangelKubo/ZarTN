@@ -176,6 +176,19 @@
             .hoverOn:hover {
                 opacity: 0;
             }
+
+            .alert.alert-danger {
+                margin: auto;
+                margin-bottom: 15px;
+                width: 90%;
+                color: crimson;
+                max-width: 350px;
+            }
+
+            .alert.alert-success {
+                margin: auto;
+                width: 90%;
+            }
         </style>
 
         {# Loads custom CSS added from Advanced Settings on the admin´s theme customization screen #}

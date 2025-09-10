@@ -167,15 +167,4 @@
 			padding: 0px;
 	}
 
-	.alert.alert-danger {
-    margin: auto;
-    margin-bottom: 15px;
-    width: 90%;
-    color: crimson;
-	}
-
-	.js-resend-validation-success.alert.alert-success {
-    margin: auto;
-    width: 90%;
-	}
 </style>

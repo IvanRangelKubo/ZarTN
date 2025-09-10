@@ -73,10 +73,4 @@
         right: 36px !important;
     }
 
-    .alert.alert-danger {
-        margin: auto;
-        margin-bottom: 15px;
-        width: 90%;
-        color: crimson;
-    }
 </style>

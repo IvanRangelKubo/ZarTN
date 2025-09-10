@@ -152,24 +152,7 @@
         margin-top: 0;
     }
 
-    .alert.alert-danger {
-        margin: auto;
-        margin-bottom: 15px;
-        width: 90%;
-        color: crimson;
-    }
 
-    .alert.alert-danger {
-        margin: auto;
-        margin-bottom: 15px;
-        width: 90%;
-        color: crimson;
-    }
-
-    .alert.alert-success {
-        margin: auto;
-        width: 90%;
-    }
 
     .form-group .form-select-icon {
         display: none;
