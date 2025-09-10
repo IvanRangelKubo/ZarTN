@@ -1,23 +1,25 @@
 {# User addresses listed #}
 
-<section class="seccinternas">
-    <div class="custom-container">
-        <div class="elementos-cuenta">
+<section class="seccinterna">
+    <div class="ccustom-container">
 
+        <div class="containermicuenta">
 
-            <div class="maintitle-cont">
-                <h2 class="maintitle">DIRECCIONES</h2>
+            <div class="contenedor-titulos">
+                <h1 class="titlesecc">MIS DIRECCIONES</h1>
+                <img src="{{ "images/title_decoration.svg" | static_url }}" loading="lazy" alt="" class="icon_titles">
             </div>
+
+            <div class="contbtncuenta">
+                <a href="/account" class="btnmicuenta w-button">Regresar</a>
+                <a href="{{ store.customer_new_address_url }}" class="btnmicuenta w-button">{{ 'Agregar una nueva dirección' | translate }}</a>
+            </div>
+
+            <p class="txtlogin">Estas son las direcciones que has dado de alta para envíos o facturación.</p>
 
             <div class="container-direcciones" >
                 {% for address in customer.addresses %}
                     <div class="direccion-container">
-                        
-                        {% if loop.first %}
-                            <h4 class="addressTitle" >{{ 'Principal' | translate }}</h4>
-                        {% elseif loop.index == 2 %}
-                            <h4 class="addressTitle" >{{ 'Otras direcciones' | translate }}</h4>
-                        {% endif %}
 
                         <div class="conticons-editadress w-clearfix">
                             <a href="{{ store.customer_address_url(address) }}" class="btndirecciones editar w-button">{{ 'Editar' | translate }}</a>
@@ -29,9 +31,17 @@
                 {% endfor %}
             </div>
 
-                
-            <a class="btndirecciones agregar w-button" href="{{ store.customer_new_address_url }}">{{ 'Agregar una nueva dirección' | translate }}</a>
+            
 
         </div>
+
     </div>
 </section>
+
+<style>
+
+    .txtlogin {
+        text-align: center;
+    }
+
+</style>
