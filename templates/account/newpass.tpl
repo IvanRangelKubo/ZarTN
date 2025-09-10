@@ -5,7 +5,13 @@
 
         <div class="containermicuenta">
 
-            <div class="w-layout-cell logcell">
+            <div class="contenedor-titulos">
+                <h1 class="titlesecc">MI CUENTA</h1>
+                <img src="{{ "images/title_decoration.svg" | static_url }}" class="icon_titles">
+            </div>
+
+            <div class="formin">
+
                 {% if link_expired %}
 
                     
@@ -23,14 +29,9 @@
 
                 {% else %}
 
-                    <div class="secctitles">
-                        <h1 class="maintitle">¡Crea tu contraseña! 🫰</h1>
-                        <div class="linetitle"></div>
-                    </div>
-
                     {% embed "snipplets/forms/form.tpl" with{form_id: 'newpass-form',form_custom_class: 'contenidoformlog',submit_custom_class: 'loginpopbtn w-button', submit_text: (customer.password ? 'Cambiar contraseña' : 'Activar cuenta')  | translate } %}
                         {% block form_body %}
-
+                            <h2 class="titles-micuenta">Crea tu nueva contraseña </h2>
                             {# Password input #}
 
                             {% embed "snipplets/forms/form-input.tpl" with{type_password: true, input_for: 'password', input_name: 'password', input_id: 'password', input_placeholder: 'Contraseña', input_required: true, input_custom_class: 'loginreg-field pass w-input' } %}
@@ -51,10 +52,6 @@
                 {% endif %}
             </div>
 
-            <div class="w-layout-cell imglogincell">
-                <div class="loginimg"></div>
-            </div>
-
         </div>
     </div>
 </section>
@@ -64,16 +61,20 @@
         margin-bottom: 0;
     }
 
-        .form-toggle-eye {
-        top: 9px !important;
+    .form-toggle-eye {
+        top: 5px !important;
         right: 36px !important;
     }
 
     .contenidoformlog {
         margin-top: 0px;
         padding: 0px;
-	}
+	}  
 
+    .formin {
+        width: 50%;
+        margin: auto;
+    }
 
     .btn.btn-primary.loginpopbtn.w-button {
         letter-spacing: normal;
