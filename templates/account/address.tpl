@@ -17,7 +17,7 @@
                 <a href="/account/addresses" class="btnmicuenta w-button">Cancelar</a>
             </div>
             
-            <div class="loginpopform w-form">
+            <div class="loginpopform">
                 {% embed "snipplets/forms/form.tpl" with{form_id: 'address-form', form_custom_class: 'contenidoformlog', submit_custom_class: 'loginpopbtn w-button', submit_text: 'Guardar cambios' | translate } %}
                     {% block form_body %}
 
