@@ -1,12 +1,12 @@
 
-<section class="seccmicuenta">
-    <div class="customcontainer">
+<div class="seccinterna">
+    <div class="custom-container">
     
-        <div class="contmicuenta">
+        <div class="containermicuenta">
 
-            <div class="secctitles internas">
-                <h1 class="maintitle internas">Mi cuenta 🌟</h1>
-                <div class="linetitle"></div>
+            <div class="contenedor-titulos">
+                <h1 class="titlesecc">HISTORIAL DE PEDIDOS</h1>
+                <img src="{{ "images/title_decoration.svg" | static_url }}" class="icon_titles">
             </div>
 
             <div class="contbtncuenta">
@@ -173,13 +173,7 @@
         margin-right: 0;
     }
 
-    .card {
-        border: 1px solid var(--lighterpink);
-    }
-
-    .btn.btn-primary.loginpopbtn.w-button {
-        letter-spacing: normal;
-        text-transform: none;
-        margin-top: 0;
+    .cont-infodirecc.w-clearfix {
+        padding-right: 0;
     }
 </style>
