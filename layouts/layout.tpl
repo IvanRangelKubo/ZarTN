@@ -169,7 +169,7 @@
                 height: 100%;
             }
 
-            .btnadd {
+            .btnadd, .btnmicuenta.w-button {
                 border-radius: 0px;
             }
 

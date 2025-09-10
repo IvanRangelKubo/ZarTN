@@ -1,11 +1,12 @@
 
-<section class="seccmicuenta">
-    <div class="customcontainer" data-store="account-order-detail-{{ order.id }}">
-    	<div class="elementos-cuenta">
+<section class="seccinterna">
+    <div class="custom-container" data-store="account-order-detail-{{ order.id }}">
 
-            <div class="secctitles internas">
-                <h1 class="maintitle internas">ORDEN: <span class="redtxttitle">#{{order.number}}</span>🌟</h1>
-                <div class="linetitle"></div>
+    	<div class="containermicuenta">
+
+            <div class="contenedor-titulos">
+                <h1 class="titlesecc">ORDEN: #{{order.number}} </h1>
+                <img src="{{ "images/title_decoration.svg" | static_url }}" loading="lazy" alt="" class="icon_titles">
             </div>
 
             <div class="contbtncuenta">
@@ -76,7 +77,7 @@
                         <div class="rowpedido w-row">
                             <div class="w-col w-col-2 w-col-small-2">
                             <a href="{{ item.url }}" class="pedidonumero">
-                                <strong>{{ item.name }}</strong>
+                                {{ item.name }}
                             </a>
                             </div>
                             <div class="w-col w-col-10 w-col-small-10">
@@ -109,12 +110,12 @@
 
                                             {# Botones de acción #}
             {% if order.pending %}
-            <a class="btn btn-primary d-block loginpopbtn w-button mt-2" 
+            <a class="btn btn-primary d-block loginpopbtn w-button" 
                 href="{{ order.checkout_url | add_param('ref', 'orders_list') }}" target="_blank">
                 {{ 'Realizar pago' | translate }}
             </a>
             {% elseif order.order_status_url %}
-            <a class="btn btn-primary d-block loginpopbtn w-button mt-2" 
+            <a class="btn btn-primary d-block loginpopbtn w-button" 
                 href="{{ order.order_status_url | add_param('ref', 'orders_list') }}" target="_blank">
                 {% if 'Correios' in order.shipping_name %}
                 {{ 'Seguí la entrega' | translate }}
@@ -125,6 +126,7 @@
             {% endif %}
 
     	</div>
+
     </div>
 </section>
 
@@ -133,9 +135,13 @@
         border: 1px solid var(--lighterpink);
     }
 
-    a.btn.btn-primary.d-block.loginpopbtn.w-button.mt-2 {
+    a.btn.btn-primary.d-block.loginpopbtn.w-button {
         letter-spacing: normal;
         text-transform: none;
         width: fit-content;
+        line-height: 45px;
+        border-radius: 0;
+        margin-left: 10px;
     }
+    
 </style>
