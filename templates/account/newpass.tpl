@@ -1,8 +1,9 @@
 {% set is_account_activation = action == 'account_activation' %}
 
-<section class="loginsecc">
-    <div class="customcontainer">
-        <div id="w-node-abb96e4f-fbf8-7de4-d1c9-82f55b4f1269-37dc749d" class="w-layout-layout stackmicuenta wf-layout-layout">
+<section class="seccinterna">
+    <div class="custom-container">
+
+        <div class="containermicuenta">
 
             <div class="w-layout-cell logcell">
                 {% if link_expired %}

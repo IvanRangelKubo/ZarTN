@@ -2,35 +2,33 @@
 {# Account validation #}
 {% if account_validation == 'pending' %}
 
-	<section class="loginsecc">
-		<div class="customcontainer">
+	<section class="seccinterna">
+		<div class="custom-container">
 
-			<div id="w-node-abb96e4f-fbf8-7de4-d1c9-82f55b4f1269-37dc749d" class="w-layout-layout stackmicuenta wf-layout-layout">
+			<div class="containermicuenta">
+
+				<div class="contenedor-titulos">
+						<h1 class="titlesecc">{{ "¡Estás a un paso de crear tu cuenta! 🫰" | translate }}</h1>
+						<img src="{{ "images/title_decoration.svg" | static_url }}" class="icon_titles">
+				</div>
 
 				<div class="w-layout-cell logcell">
 
-					<div class="secctitles">
-							<h1 class="maintitle">{{ "¡Estás a un paso de crear tu cuenta! 🫰" | translate }}</h1>
-							<div class="linetitle"></div>
-					</div>
 
-					<p class="txtlogin">{{ "Te enviamos un link a <strong>{1}</strong> para que valides tu email." | t(customer_email) }} </p>
+					<p class="txtlogin center">{{ "Te enviamos un link a <strong>{1}</strong> para que valides tu email." | t(customer_email) }} </p>
 
 					<div class="font-small mb-4">
-						<p class="txtlogin" >{{ "¿Todavía no lo recibiste?" | translate }} <span class="js-resend-validation-link btn-link">{{ "Enviar link de nuevo" | translate }}</span></p>
+						<p class="txtlogin center" >{{ "¿Todavía no lo recibiste?" | translate }} <span class="js-resend-validation-link btn-link">{{ "Enviar link de nuevo" | translate }}</span></p>
 					</div>
 					<div class="js-resend-validation-success alert alert-success" style="display:none">
-						<p class="txtlogin">{{ "¡El link fue enviado correctamente!" | translate }}</p>
+						<p class="txtlogin center">{{ "¡El link fue enviado correctamente!" | translate }}</p>
 					</div>
 					<div class="js-resend-validation-error alert alert-danger" style="display:none">
-						<p class="txtlogin">{{ "No pudimos enviar el email, intentalo de nuevo en unos minutos." | translate }}</p>
+						<p class="txtlogin center">{{ "No pudimos enviar el email, intentalo de nuevo en unos minutos." | translate }}</p>
 					</div>
 
 				</div>
 
-				<div class="w-layout-cell imglogincell">
-					<div class="loginimg"></div>
-				</div>
 
 			</div>
 
@@ -166,5 +164,13 @@
 			margin-top: 0px;
 			padding: 0px;
 	}
+
+	p.center.txtlogin {
+    text-align: center;
+	}
+
+	.font-small.mb-4 {
+    width: 100%;
+}
 
 </style>
