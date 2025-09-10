@@ -69,7 +69,7 @@
     }
 
     .form-toggle-eye {
-        top: 9px !important;
+        top: 5px !important;
         right: 36px !important;
     }
 
