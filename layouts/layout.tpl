@@ -169,7 +169,7 @@
                 height: 100%;
             }
 
-            .btnadd, .btnmicuenta.w-button {
+            .btnadd, .btnmicuenta.w-button, .loginpopbtn.w-button {
                 border-radius: 0px;
             }
 

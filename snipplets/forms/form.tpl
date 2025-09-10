@@ -18,9 +18,9 @@
     {% endif %}
     <input class="btn btn-primary {{ submit_custom_class }}" type="submit" value="{{ submit_text }}" name="{{ submit_name }}" {{ submit_prop }}/>
     {% if template == 'account.login' %}
-        <a href="/account/reset" class="frgtpassword">Olvidé mi contraseña</a>
+        <a href="/account/reset" class="labelcheck-tyc">Olvidé mi contraseña</a>
     {% endif %}
         {% if template == 'account.reset' %}
-        <a href="/account" class="frgtpassword">Regresar</a>
+        <a href="/account" class="labelcheck-tyc">Regresar</a>
     {% endif %}
 </form>
