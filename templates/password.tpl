@@ -52,7 +52,7 @@
         {# Load async styling not mandatory for first meaningfull paint #}
 
         <link rel="stylesheet" href="{{ 'css/style-async.scss.tpl' | static_url }}" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="{{ 'css/personalized3.css' | static_url }}">
+        <link rel="stylesheet" href="{{ 'css/ZarStyles2.css' | static_url }}">
 
         {# Loads custom CSS added from Advanced Settings on the admin´s theme customization screen #}
 
@@ -93,37 +93,36 @@
 
         {# Page content #}
 
-          <div class="mttocont">
-            <div id="w-node-_46d8964c-167c-42eb-1366-7b03a87a9a68-20e2c06a" class="w-layout-layout stackmtto wf-layout-layout">
-                <div class="w-layout-cell celllogo">
-                    <div>
-                        <img loading="lazy" src="{{ "images/amie_logo_header.svg" | static_url }}" alt="amie world logo" class="logomtto">
+        <div class="mttocont">
+            <div class="contmttoinfo">
+
+                <img loading="lazy" src="{{ "images/logo_zar_blanco.svg" | static_url }}" alt="Zar de las llantas" class="logomtto">
+
+                <h1 class="titlemtto">En el ZAR de las llantas nos estamos preparando para traerte algo nuevo.</h1>
+                <p class="txtmtto">Por favor, inténtalo nuevamente en unos minutos</p>
+
+                <div id="Lock">
+                    <img loading="lazy" src="{{ "images/password_icon.svg" | static_url }}" class="iconformmtto" data-ix="showformlogin">
+                </div>
+
+                <div id="Pass">
+                    <div class="formloginstore w-form">
+                        {% embed "snipplets/forms/form.tpl" with{form_id: 'password-form', submit_text: 'Login' | translate, form_custom_class: 'contlogform', submit_custom_class: 'logiintienda w-button' } %}
+                            {% block form_body %}
+
+                                {% embed "snipplets/forms/form-input.tpl" with{input_for: 'password', type_password: true, input_name: 'password', input_help: true, input_help_link: store.customer_reset_password_url, input_custom_class: 'passtienda w-input' } %}
+                                    {% block input_form_alert %}
+                                        {% if invalid_password == true %}
+                                            <div class="alert alert-danger">{{ 'La contraseña es incorrecta.' | translate }}</div>
+                                        {% endif %}
+                                    {% endblock input_form_alert %}
+                                {% endembed %}
+
+                            {% endblock %}
+                        {% endembed %}
                     </div>
                 </div>
-                <div class="w-layout-cell">
-                    <h1 class="titlemtto">Estamos preparando algo increíble para ti 🎁</h1>
-                    <p class="txtmtto">Por favor, inténtalo nuevamente en unos minutos para descubrir todas las novedades.</p>
-                    <div id="Lock">
-                        <img data-w-id="46d8964c-167c-42eb-1366-7b03a87a9a72" loading="lazy" alt="" src="{{ "images/password_icon.svg" | static_url }}" class="iconformmtto">
-                    </div>
-                    <div class="div-block">
-                        <div class="formloginstore w-form" id="Pass">
-                            {% embed "snipplets/forms/form.tpl" with{form_id: 'password-form', submit_text: 'Login' | translate, form_custom_class: 'contlogform', submit_custom_class: 'logiintienda w-button' } %}
-                                {% block form_body %}
 
-                                    {% embed "snipplets/forms/form-input.tpl" with{input_for: 'password', type_password: true, input_name: 'password', input_help: true, input_help_link: store.customer_reset_password_url, input_custom_class: 'passtienda w-input' } %}
-                                        {% block input_form_alert %}
-                                            {% if invalid_password == true %}
-                                                <div class="alert alert-danger">{{ 'La contraseña es incorrecta.' | translate }}</div>
-                                            {% endif %}
-                                        {% endblock input_form_alert %}
-                                    {% endembed %}
-
-                                {% endblock %}
-                            {% endembed %}
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -168,6 +167,10 @@
             input.btn.btn-primary.logiintienda.w-button {
                 text-transform: none;
                 letter-spacing: 0;
+            }
+
+            .formloginstore {
+                display: block;
             }
         </style>
 

@@ -123,10 +123,17 @@
 
             a.js-notification-close.js-acknowledge-cookies.btn.btn-primary.btn-medium.px-4.py-2.d-inline-block.loginpopbtn.w-button {
                 margin: 0;
+                letter-spacing: normal;
+                line-height: 28px;
+                text-transform: none;
             }
 
             .js-notification.js-notification-cookie-banner.notification.notification-fixed-bottom.notification-above.notification-secondary {
-                background: white;
+                background: black;
+            }
+
+            .col-12.col-md-7.offset-md-2.mb-3.mb-md-0.text-foreground {
+                color: white;
             }
 
             #modal-cart > .js-ajax-cart-panel > .modal-header > span.modal-close {
@@ -348,23 +355,23 @@
                     responsive:{
                         0:{
                             items:2,
-                            nav:true,
-                        dots:false
+                            nav:false,
+                            dots:true
                         },
                         480:{
                             items:3,
-                            nav:true,
-                            dots:false
+                            nav:false,
+                            dots:true
                         },
                         767:{
                             items:3,
-                            nav:true,
-                        dots:false
+                            nav:false,
+                            dots:true
                         },
                     991:{
                             items:4,
                             nav:true,
-                        dots:false
+                            dots:false
                         }
                     }
                 });
@@ -385,23 +392,23 @@
                     responsive:{
                         0:{
                             items:2,
-                            nav:true,
-                        dots:false
+                            nav:false,
+                            dots:true
                         },
                         480:{
                             items:2,
-                            nav:true,
-                            dots:false
+                            nav:false,
+                            dots:true
                         },
                         767:{
                             items:4,
                             nav:false,
-                        dots:false
+                            dots:false
                         },
                     991:{
                             items:4,
                             nav:false,
-                        dots:false
+                            dots:false
                         }
                     }
                 });
