@@ -51,19 +51,11 @@
         width: 50% !important;
     }
 
-    .titleentry {
-        min-height: auto !important;
-        height: auto !important;
+
+
+    .readmore-btn:hover {
+        color: black;
     }
 
-    .excerptblog {
-        height: 150px;
-    }
-
-    @media screen and (max-width: 479px) {
-        .excerptblog {
-            height: auto;
-        }
-    }
 
 </style>
