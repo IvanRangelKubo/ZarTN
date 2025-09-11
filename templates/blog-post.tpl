@@ -79,7 +79,9 @@
     }
 
     @media screen and (max-width: 479px) {
-
+        .picblog-entry {
+            width: 100%;
+        }
     }
 
 </style>
