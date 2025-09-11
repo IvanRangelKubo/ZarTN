@@ -1,38 +1,33 @@
-<div class="secclistblog">
-    <div class="customcontainer">
+
+
+<div class="seccionblog">
+    <div class="custom-container">
 
         <div class="secctitles">
             <div class="linetitle"></div>
-            <h1 class="maintitle internas">{{ settings.blog_title }}</h1>
+            <h1 class="maintitle internas"></h1>
             <div class="linetitle"></div>
         </div>
 
-        <p class="introblog">{{ settings.blog_page_description }}</p>
+        <div class="contenedor-titulos">
+            <h1 class="titlesecc">{{ settings.blog_title }}</h1>
+            <img src="{{ "images/title_decoration.svg" | static_url }}" class="icon_titles">
+        </div>
 
-        <div class="listingposts">
+        <p class="parrafo-about">{{ settings.blog_page_description }}</p>
+
+        <div class="cont-elementosblog">
             {% for post in blog.posts %}
-            
-                <div class="entrycont listing">
-                    <div id="w-node-_14696461-c14d-e87d-c4f5-40bfd98d348b-08e4e0d2" class="w-layout-layout stackentry listing wf-layout-layout">
 
-    
-                        <div class="w-layout-cell imgcellentry">
-                            <div class="imgentrydiv" style="background-image: url('{{ post.thumbnail | default('images/placeholder-zar.jpg') }}');"></div>
-                        </div>
-
-                        <div class="w-layout-cell">
-                            <div class="infominblog">
-                                <div class="dateentryblog">{{ post.date | date("d/m/Y") }}</div>
-                                <h5 class="titleentry">{{ post.title }}</h5>
-                                <p class="excerptblog">
-                                    {{ post.summary}}
-                                </p>
-                                <a href="{{ shop.url }}/blog/posts/{{ post.handle }}" class="readmoreblog">Leer más</a>
-                            </div>
-                        </div>
-
+                <a href="{{ shop.url }}/blog/posts/{{ post.handle }}" class="itemblog-carrusel listing w-inline-block">
+                    <div class="miniatura-entradablog listing" style="background-image: url('{{ post.thumbnail | default('images/placeholder-zar.jpg' | static_url ) }}');" ></div>
+                    <div class="itemsblog-listing">
+                        <div class="date-blog">{{ post.date | date("d/m/Y") }}</div>
+                        <h5 class="titulo-entryblog">{{ post.title }}</h5>
+                        <p class="excerptblog-slider">{{ post.summary}}</p>
+                        <div class="readmore-btn">Leer más</div>
                     </div>
-                </div>
+                </a>
 
             {% endfor %}
         </div>
