@@ -11,7 +11,7 @@
 
         <div class="w-layout-cell">
           <div class="colfooter">
-            <h5 data-w-id="0737ae8c-1141-924f-e9ac-aff72f070260" class="footertiltulo">{{ settings.menu_1_name }}</h5>
+            <h6 data-w-id="34b901d2-fc78-12e8-962d-984706326149" class="footertiltulo">{{ settings.menu_1_name }}</h6>
             <div class="cont-items-footer">
               <ul role="list" class="items-footer">
 								{% for item in menus[settings.footer_menu_1] %}
@@ -26,7 +26,7 @@
 
         <div class="w-layout-cell">
           <div class="colfooter">
-            <h5 data-w-id="0737ae8c-1141-924f-e9ac-aff72f070275" class="footertiltulo">{{ settings.menu_2_name }}</h5>
+            <h6 data-w-id="34b901d2-fc78-12e8-962d-98470632615e" class="footertiltulo">{{ settings.menu_2_name }}</h6>
             <div class="cont-items-footer">
               <ul role="list" class="items-footer">
 								{% for item in menus[settings.footer_menu_2] %}
