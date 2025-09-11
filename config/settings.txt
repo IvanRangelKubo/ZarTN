@@ -661,15 +661,6 @@ Blog
 	textarea
 		name = blog_page_description
 		description = "Descripción"
-	dropdown
-		name = blog_quantity_posts
-		description = Cantidad de posts por página
-		values
-			4 = 4
-			6 = 6
-			12 = 12
-			16 = 26
-			24 = 24
 	
 
 Pie de página

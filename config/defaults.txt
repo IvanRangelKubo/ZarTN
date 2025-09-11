@@ -48,6 +48,5 @@ home_order_position_7 = informatives
 ajax_cart = 1
 add_to_cart_recommendations = 1
 category_quantity_products = 12
-blog_quantity_posts = 4
 cart_minimum_value = 0
 shipping_calculator_cart_page = 0
