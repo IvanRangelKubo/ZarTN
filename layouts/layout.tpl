@@ -167,6 +167,10 @@
                 padding-right: 10px;
             }
 
+            .icon-lg {
+                font-size: 1.7em;
+            }
+
 
             form.js-ajax-cart-panel {
                 height: 100%;
