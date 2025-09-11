@@ -126,6 +126,10 @@
         .row.align-items-center {
             flex-wrap: wrap;
         }
+
+        h6.font-weight-normal.col-12.col-md-6.h4-md.mb-2.mb-md-0 {
+            text-align: left;
+        }
     }
 
 
