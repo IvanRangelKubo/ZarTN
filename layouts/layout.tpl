@@ -160,7 +160,7 @@
             }
 
             .cartItems {
-                height: 78%;
+                height: 72%;
                 overflow-y: auto; 
                 overflow-x: hidden;
                 scrollbar-gutter: stable both-edges;
