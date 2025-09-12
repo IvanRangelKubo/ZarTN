@@ -49,10 +49,15 @@
 									{% endembed %}
 								{% endif %}
 							</div>
+							
+							<div class="divordenar mobile">
+								<div class="ordenar-selector">
+									{% include 'snipplets/grid/sort-by.tpl' %}
+								</div>
+							</div>
 
 						{% endif %}
 					</div>
-					
 
 					<!-- Filters -->
 					<div class="row ApliedFilters">
@@ -156,6 +161,10 @@
 				border: none;
 		}
 
+		.divordenar.mobile {
+			display: none;
+		}
+
 
 
 		    @media screen and (max-width: 479px) {
@@ -164,7 +173,7 @@
 				}
 
 				.js-category-controls.row.align-items-center.mb-md-3.category-controls.categoryFilters {
-					margin: 25px 10px 25px 10px;
+					margin: 0px 10px 25px 10px;
 				}
 
 				.filtersCategory {
@@ -173,6 +182,10 @@
 
 				.category-controls {
 					top: 0 !important;
+				}
+
+				.divordenar.mobile {
+						display: block;
 				}
 			}
 

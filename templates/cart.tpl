@@ -122,13 +122,25 @@
         top: 20%;
     }
 
+    @media screen and (max-width: 991px){
+        h6.font-weight-normal.col-12.col-md-6.h4-md.mb-2.mb-md-0 {
+            text-align: left;
+        }
+    }
+
     @media screen and (max-width: 479px) {
         .row.align-items-center {
             flex-wrap: wrap;
         }
 
-        h6.font-weight-normal.col-12.col-md-6.h4-md.mb-2.mb-md-0 {
-            text-align: left;
+        h5.js-visible-on-cart-filled.row.no-gutters.justify-content-end.justify-content-md-center.mb-1 {
+            display: block;
+            text-align: end;
+        }
+
+        h2.row.no-gutters.text-primary.mb-0.justify-content-end.justify-content-md-center {
+            display: block;
+            text-align: end;
         }
     }
 
