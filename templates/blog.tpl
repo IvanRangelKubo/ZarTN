@@ -3,12 +3,6 @@
 <div class="seccionblog">
     <div class="custom-container">
 
-        <div class="secctitles">
-            <div class="linetitle"></div>
-            <h1 class="maintitle internas"></h1>
-            <div class="linetitle"></div>
-        </div>
-
         <div class="contenedor-titulos">
             <h1 class="titlesecc">{{ settings.blog_title }}</h1>
             <img src="{{ "images/title_decoration.svg" | static_url }}" class="icon_titles">

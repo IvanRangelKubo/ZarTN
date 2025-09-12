@@ -19,7 +19,7 @@
     <div class="custom-container">
 
         <div class="contenedor-titulos">
-            <h1 class="titlesecc">{{ settings.product_garranties_title }}</h1>
+            <h2 class="titlesecc">{{ settings.product_garranties_title }}</h2>
             <img src="{{ "images/title_decoration.svg" | static_url }}" class="icon_titles">
         </div>
 

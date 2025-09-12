@@ -1,6 +1,5 @@
     {# Product name and breadcrumbs #}
-    <h1 class="titleproductvip"></h1>
-
+    
     <div class="cont-infovip">
 
         <h1 class="title-prod-detalle">{{ product.name }}</h1>
