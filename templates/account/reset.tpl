@@ -69,5 +69,12 @@
         width: fit-content;
         line-height: 45px;
     }
+
+    @media screen and (max-width: 479px) {
+        .bordercell {
+            border-top: 0;
+            border-bottom: 1px solid #c9c9c9;
+        }
+    }
     
 </style>
