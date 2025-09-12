@@ -62,16 +62,19 @@
     
               </div>
 
-                {% if product.available and not product.variations %}
+                {% if product.available  %}
                   <form class="js-product-form" method="post" action="{{ store.cart_url }}">
                     <input type="hidden" name="add_to_cart" value="{{ product.id }}" />
                     <input type="hidden" name="quantity" value="1" />
-
-                    <button type="submit"
-                            class="btnadd w-button js-addtocart js-prod-submit-form"
-                            data-store="product-buy-button">
-                            COMPRAR
-                    </button>
+                    {% if not product.variations %}
+                      <button type="submit"
+                              class="btnadd w-button js-addtocart js-prod-submit-form"
+                              data-store="product-buy-button">
+                              COMPRAR
+                      </button>
+                    {% else %}
+                      <a href="{{ product.canonical_url }}" class="btnadd w-button" >COMPRAR</a>
+                    {% endif %}
                   </form>
                 {% endif %}
 
