@@ -28,3 +28,9 @@
       </div>
     </div>
   </div>
+
+<style>
+  a.vermasbtn.w-button {
+      border-radius: 0;
+  }
+</style>
