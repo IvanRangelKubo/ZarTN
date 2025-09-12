@@ -170,7 +170,9 @@
 			display: none;
 		}
 
-
+		.listing-header {
+				margin-bottom: 10px;
+		}
 
 		    @media screen and (max-width: 479px) {
 				.col-12.mb-3.containerFiltersApplied {
