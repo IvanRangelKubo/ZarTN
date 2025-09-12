@@ -145,6 +145,10 @@
     white-space: normal;
   }
 
+  .footerlink:hover {
+      color: white;
+  }
+
   @media screen and (max-width: 479px) {
 
     .copytxt + div {
