@@ -82,6 +82,7 @@
         align-items: flex-start;
         gap: 10px;
         flex-wrap: wrap;
+        padding: 0;
     }
 
     button.js-remove-filter.chip {
