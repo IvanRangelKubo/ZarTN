@@ -3,7 +3,7 @@
 
       <div class="contenedor-titulos">
         <h6 class="titlesecc white">{{ settings.reviews_section_title }}</h6>
-        <img src="{{ "images/titleline_white.svg" | static_url }}" alt="" class="icon_titles">
+        <img src="{{ "images/titleline_white.svg" | static_url }}" class="icon_titles">
       </div>
 
       <div data-delay="4000" data-animation="slide" class="reviews-slider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">

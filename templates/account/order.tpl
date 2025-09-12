@@ -6,7 +6,7 @@
 
             <div class="contenedor-titulos">
                 <h1 class="titlesecc">ORDEN: #{{order.number}} </h1>
-                <img src="{{ "images/title_decoration.svg" | static_url }}" loading="lazy" alt="" class="icon_titles">
+                <img src="{{ "images/title_decoration.svg" | static_url }}" loading="lazy" class="icon_titles">
             </div>
 
             <div class="contbtncuenta">

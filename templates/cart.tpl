@@ -4,7 +4,7 @@
 
             <div class="contenedor-titulos">
             <h1 class="titlesecc">MI CARRITO</h1>
-            <img src="{{ "images/title_decoration.svg" | static_url }}" loading="lazy" alt="" class="icon_titles">
+            <img src="{{ "images/title_decoration.svg" | static_url }}" loading="lazy" class="icon_titles">
             </div>
 
             <form action="{{ store.cart_url }}" method="post" class="cart-body" data-store="cart-form" data-component="cart">

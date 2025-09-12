@@ -17,7 +17,7 @@
             <div>
                 {% for logo in paymentMethod.logos %}
                     <span>
-                        <img src="{{ 'images/empty-placeholder.png' | static_url }}" data-src="{{ logo | payment_new_logo }}" class="lazyload card-img card-img-medium" alt="">
+                        <img src="{{ 'images/empty-placeholder.png' | static_url }}" data-src="{{ logo | payment_new_logo }}" class="lazyload card-img card-img-medium">
                     </span>
                 {% endfor %}
             </div>

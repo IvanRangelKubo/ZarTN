@@ -8,7 +8,7 @@
 
       <div class="contenedor-titulos">
         <h2 class="titlesecc">{{ settings.home_featured_products_title | raw }}</h2>
-        <img src="{{ "images/title_decoration.svg" | static_url }}" alt="" class="icon_titles">
+        <img src="{{ "images/title_decoration.svg" | static_url }}" class="icon_titles">
       </div>
 
       <div class="customhtml w-embed">

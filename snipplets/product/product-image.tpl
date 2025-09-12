@@ -26,7 +26,7 @@
 	<img src="{{ 'images/placeholder-zar.jpg' | static_url }}" alt="{{ product.name }}">
 {% endif %}
 
-<img loading="lazy" src="{{ "images/share-icon.svg" | static_url }}" alt="" class="shareicon" data-ix="showsocialshare">
+<img loading="lazy" src="{{ "images/share-icon.svg" | static_url }}" alt="Compartir" class="shareicon" data-ix="showsocialshare">
 
 <div class="contsocial-media detalle">
 
