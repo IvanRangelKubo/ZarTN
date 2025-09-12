@@ -11,7 +11,7 @@
 #}
 
 {% if template == 'category' or template == 'search' %}
-  <div class="listing-header">
+  <div class="listing-header" >
     <div class="custom-container">
         <div class="titulo-cate">
           <h1 class="innertitle">{% block page_header_text %}{% endblock %}</h1>

@@ -8,12 +8,18 @@
         {% set category_images = category_images|merge({(size):(category.images | first | category_image_url(size))}) %}
     {% else %}
         {# Define images for general banner #}
-        {% set category_images = category_images|merge({(size):('banner-products.jpg' | static_url | settings_image_url(size))}) %}
+        {% set category_images = category_images|merge({(size):('banner_listing.jpg' | static_url | settings_image_url(size))}) %}
     {% endif %}
 {% endfor %}
 
-{% set category_image_url = 'banner-products.jpg' | static_url %}
+{% set category_image_url = 'banner_listing.jpg' | static_url %}
 
-<section class="category-banner position-relative mb-2" data-store="category-banner">
-    <img class="lazyautosizes lazyload blur-up position-relative w-100" src="{{ category_images['small'] }}" data-srcset="{{ category_images['large'] }} 480w, {{ category_images['huge'] }} 640w, {{ category_images['original'] }} 1024w, {{ category_images['1080p'] }} 1920w" data-sizes="auto" alt="{{ 'Banner de la categoría' | translate }} {{ category.name }}" />
-</section>
+  <div class="listing-header" style="background-image:url({{ category_images['1080p'] }})" >
+    <div class="custom-container">
+        <div class="titulo-cate">
+          <h1 class="innertitle">{{ category.name }}</h1>
+          <img src="{{ "images/titleline_white.svg" | static_url }}" class="imgtitle-listing">
+        </div>
+      {% include "snipplets/breadcrumbs.tpl" %}
+    </div>
+  </div>

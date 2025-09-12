@@ -5,14 +5,19 @@
 {# Only remove this if you want to take away the theme onboarding advices #}
 {% set show_help = not has_products %}
 
-
 {% if not show_help %}
+
+	
 
 	<section class="seccinterna">
 
-		{% embed "snipplets/page-header.tpl" with { breadcrumbs: true } %}
-			{% block page_header_text %}{{ category.name }}{% endblock page_header_text %}
-		{% endembed %}
+		{% if (category.images is not empty) %}
+			{% include 'snipplets/category-banner.tpl' %}
+		{% else %}
+			{% embed "snipplets/page-header.tpl" with { breadcrumbs: true } %}
+				{% block page_header_text %}{{ category.name }}{% endblock page_header_text %}
+			{% endembed %}
+		{% endif %}
 
 		<div class="custom-container">
 			<div class="w-row">
