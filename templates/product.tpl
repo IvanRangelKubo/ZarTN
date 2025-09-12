@@ -108,7 +108,7 @@
         }
 
         .contsocial-media {
-            padding-top: 10px;
+            padding-top: 5px;
         }
 
         .containershare {
@@ -119,6 +119,15 @@
             display: flex;
             justify-content: flex-start;
         }
+
+        .swiper-container {
+            width: 90%;
+        }
+
+        .text-center {
+            text-align: left !important;
+        }
+        
     }
 
 
