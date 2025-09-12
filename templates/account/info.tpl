@@ -92,5 +92,13 @@
         text-transform: none;
         margin-top: 0;
     }
+
+    @media screen and (max-width: 479px) {
+        .loginpopform {
+            margin-top: 20px;
+        }
+    }
+
+
     
 </style>
