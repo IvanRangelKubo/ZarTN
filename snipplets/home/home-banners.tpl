@@ -120,7 +120,7 @@
       const params = new URLSearchParams({
         Alto: alto,
         Ancho: ancho,
-        Rodado: rodado
+        Rodada: rodado
       });
 
       const finalURL = `${slugCategoria}?${params.toString()}`;
