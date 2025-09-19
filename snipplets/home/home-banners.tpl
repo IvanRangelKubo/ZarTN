@@ -51,6 +51,87 @@
           </div>
         </div>
       </div>
+      
+      <div class="advancedSearch">
+        <form id="deepSearch" class="deepSearchForm">
+          <select name="Alto" id="alto">
+            <option value="" disabled selected hidden>Alto</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+            <option value="60">60</option>
+            
+          </select>
+
+          <select name="Ancho" id="ancho">
+            <option value="" disabled selected hidden>Ancho</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            
+          </select>
+
+          <select name="Rodado" id="rodado">
+            <option value="" disabled selected hidden>Rodado</option>
+            <option value="R15">R15</option>
+            <option value="16">R16</option> 
+            <option value="R17">R17</option> 
+            
+          </select>
+
+          <button type="submit" class="btnbuscar">Buscar</button>
+        </form>
+
+      </div>
 
     </div>
   </div>
+
+<script>
+  (function () {
+    const form = document.getElementById('deepSearch');
+    if (!form) return console.warn('Formulario avanzado no encontrado.');
+
+    const slugCategoria = "/productos";
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const altoEl = document.getElementById('alto');
+      const anchoEl = document.getElementById('ancho');
+      const rodadoEl = document.getElementById('rodado');
+
+      if (!altoEl || !anchoEl || !rodadoEl) {
+        console.error("Faltan campos en el formulario.");
+        return;
+      }
+
+      const alto = altoEl.value.trim();
+      const ancho = anchoEl.value.trim();
+      let rodado = rodadoEl.value.trim();
+
+      if (!alto || !ancho || !rodado) {
+        alert("Por favor, completá todos los campos para buscar.");
+        return;
+      }
+
+      rodado = /^R/i.test(rodado) ? rodado.toUpperCase() : "R" + rodado;
+
+  
+      const params = new URLSearchParams({
+        Alto: alto,
+        Ancho: ancho,
+        Rodado: rodado
+      });
+
+      const finalURL = `${slugCategoria}?${params.toString()}`;
+      window.location.href = finalURL;
+    });
+  })();
+</script>
+
+
+<script>
+    console.log("filters:");
+    console.log({{ product_filters | json_encode | raw }});
+</script>
+
