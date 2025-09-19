@@ -129,9 +129,3 @@
   })();
 </script>
 
-
-<script>
-    console.log("filters:");
-    console.log({{ product_filters | json_encode | raw }});
-</script>
-
