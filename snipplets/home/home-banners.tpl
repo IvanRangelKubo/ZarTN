@@ -1,8 +1,6 @@
   <div class="seccelegir">
     <div class="custom-container">
 
-
-
       <div class="contenedor-titulos">
         <h4 class="titlesecc">{{ settings.banners_section_title }}</h4>
         <img src="{{ "images/title_decoration.svg" | static_url }}"  class="icon_titles">
@@ -54,37 +52,56 @@
       
       <div class="advancedSearch">
         <form id="deepSearch" class="deepSearchForm">
-          <select name="Alto" id="alto">
-            <option value="" disabled selected hidden>Alto</option>
-            <option value="50">50</option>
-            <option value="55">55</option>
-            <option value="60">60</option>
-            
-          </select>
 
-          <select name="Ancho" id="ancho">
+          <select name="Ancho" id="ancho" class="form-select loginreg-field w-select">
             <option value="" disabled selected hidden>Ancho</option>
             <option value="30">30</option>
             <option value="35">35</option>
             <option value="40">40</option>
-            
           </select>
 
-          <select name="Rodado" id="rodado">
+          <select name="Alto" id="alto" class="form-select loginreg-field w-select">
+            <option value="" disabled selected hidden>Alto</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+            <option value="60">60</option>
+          </select>
+
+          <select name="Rodado" id="rodado" class="form-select loginreg-field w-select">
             <option value="" disabled selected hidden>Rodado</option>
             <option value="R15">R15</option>
             <option value="16">R16</option> 
             <option value="R17">R17</option> 
-            
           </select>
 
-          <button type="submit" class="btnbuscar">Buscar</button>
+          <button type="submit" class="btn btn-primary loginpopbtn w-button">Buscar</button>
         </form>
 
       </div>
 
     </div>
   </div>
+
+  <style>
+
+  .deepSearchForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+
+  select#alto, select#ancho, select#rodado {
+      margin: 0;
+      border-radius: 0;
+  }
+
+  button.btn.btn-primary.loginpopbtn.w-button {
+      margin: 0;
+  }
+  </style>
 
 <script>
   (function () {
