@@ -160,6 +160,7 @@
     }
   </style>
 
+  <!-- Script para búsqueda por medida -->
   <script>
     (function () {
       const form = document.getElementById('deepSearch');
@@ -175,7 +176,7 @@
         const rodadoEl = document.getElementById('rodado');
         const brandEl = document.getElementById('brand');
 
-        if (!altoEl || !anchoEl || !rodadoEl || !brandEl) {
+        if (!altoEl || !anchoEl || !rodadoEl) {
           console.error("Faltan campos en el formulario.");
           return;
         }
@@ -183,23 +184,24 @@
         const alto = altoEl.value.trim();
         const ancho = anchoEl.value.trim();
         let rodado = rodadoEl.value.trim();
-        const brand = brandEl.value.trim();
+        const brand = brandEl ? brandEl.value.trim() : "";
 
-        if (!alto || !ancho || !rodado || !brand) {
+        if (!alto || !ancho || !rodado) {
           alert("Por favor, completá todos los campos para buscar.");
           return;
         }
 
-        // Normalizar rodado (agregar "R" si no tiene prefijo)
         rodado = /^R/i.test(rodado) ? rodado.toUpperCase() : "R" + rodado;
 
-        // Armar parámetros
         const params = new URLSearchParams({
           Alto: alto,
           Ancho: ancho,
-          Rodada: rodado,
-          brand: brand // 👈 ahora sí va en la URL
+          Rodada: rodado
         });
+
+        if (brand) {
+          params.set("brand", brand);
+        }
 
         const finalURL = `${slugCategoria}?${params.toString()}`;
         window.location.href = finalURL;
@@ -207,6 +209,8 @@
     })();
   </script>
 
+
+  <!-- Script para alternar entre búsquedas -->
   <script>
 
     document.addEventListener('DOMContentLoaded', function() {
@@ -232,122 +236,117 @@
 
   </script>
 
+  <!-- Script para búsqueda por modelo -->
   <script>
-  (function () {
-    const slugCategoria = "/productos";
+    (function () {
+      const form = document.getElementById("modelSearchForm");
+      if (!form) return;
 
-    // JSON de ejemplo (puede cargarse vía fetch si lo tenés en un archivo .json)
-    const data = {
-      "FORD": {
-        "AEROSTAR": {
-          "1991": {
-            "XL": { "Ancho": "30", "Alto": "50", "Rin": "15" }
-          },
-          "1992": {
-            "XL": { "Ancho": "35", "Alto": "55", "Rin": "16" }
+      const marcaSelect = document.getElementById("marca");
+      const modeloSelect = document.getElementById("modelo");
+      const anioSelect = document.getElementById("anio");
+      const versionSelect = document.getElementById("version");
+      const submitBtn = form.querySelector("button[type='submit']");
+
+      const modelsUrl = "{{ 'utils/models.json' | static_url }}";
+
+      fetch(modelsUrl)
+        .then((res) => res.json())
+        .then((data) => {
+          initSearch(data);
+        })
+        .catch((err) => {
+          console.error("Error cargando models.json:", err);
+        });
+
+      function initSearch(data) {
+
+        Object.keys(data).forEach((marca) => {
+          marcaSelect.innerHTML += `<option value="${marca}">${marca}</option>`;
+        });
+        marcaSelect.disabled = false;
+
+        marcaSelect.addEventListener("change", () => {
+          const marca = marcaSelect.value;
+          modeloSelect.innerHTML = `<option value="" disabled selected hidden>Modelo</option>`;
+          anioSelect.innerHTML = `<option value="" disabled selected hidden>Año</option>`;
+          versionSelect.innerHTML = `<option value="" disabled selected hidden>Versión</option>`;
+
+          modeloSelect.disabled = true;
+          anioSelect.disabled = true;
+          versionSelect.disabled = true;
+          submitBtn.disabled = true;
+
+          if (marca && data[marca]) {
+            Object.keys(data[marca]).forEach((modelo) => {
+              modeloSelect.innerHTML += `<option value="${modelo}">${modelo}</option>`;
+            });
+            modeloSelect.disabled = false;
           }
-        }
+        });
+
+        modeloSelect.addEventListener("change", () => {
+          const marca = marcaSelect.value;
+          const modelo = modeloSelect.value;
+          anioSelect.innerHTML = `<option value="" disabled selected hidden>Año</option>`;
+          versionSelect.innerHTML = `<option value="" disabled selected hidden>Versión</option>`;
+          anioSelect.disabled = true;
+          versionSelect.disabled = true;
+          submitBtn.disabled = true;
+
+          if (marca && modelo && data[marca][modelo]) {
+            Object.keys(data[marca][modelo]).forEach((anio) => {
+              anioSelect.innerHTML += `<option value="${anio}">${anio}</option>`;
+            });
+            anioSelect.disabled = false;
+          }
+        });
+
+        anioSelect.addEventListener("change", () => {
+          const marca = marcaSelect.value;
+          const modelo = modeloSelect.value;
+          const anio = anioSelect.value;
+          versionSelect.innerHTML = `<option value="" disabled selected hidden>Versión</option>`;
+          versionSelect.disabled = true;
+          submitBtn.disabled = true;
+
+          if (marca && modelo && anio && data[marca][modelo][anio]) {
+            Object.keys(data[marca][modelo][anio]).forEach((version) => {
+              versionSelect.innerHTML += `<option value="${version}">${version}</option>`;
+            });
+            versionSelect.disabled = false;
+          }
+        });
+
+        versionSelect.addEventListener("change", () => {
+          submitBtn.disabled = !versionSelect.value;
+        });
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const marca = marcaSelect.value;
+          const modelo = modeloSelect.value;
+          const anio = anioSelect.value;
+          const version = versionSelect.value;
+
+          if (marca && modelo && anio && version) {
+            const medidas = data[marca][modelo][anio][version];
+            const params = new URLSearchParams({
+              Ancho: medidas.Ancho,
+              Alto: medidas.Alto,
+              Rodada: "R" + medidas.Rin,
+            });
+            window.location.href = `/productos?${params.toString()}`;
+          } else {
+            alert("Por favor selecciona todos los campos");
+          }
+        });
       }
-    };
-
-    const form = document.getElementById("modelSearchForm");
-    const marcaEl = document.getElementById("marca");
-    const modeloEl = document.getElementById("modelo");
-    const anioEl = document.getElementById("anio");
-    const versionEl = document.getElementById("version");
-    const submitBtn = form.querySelector("button[type=submit]");
-
-    Object.keys(data).forEach(marca => {
-      const opt = document.createElement("option");
-      opt.value = marca;
-      opt.textContent = marca;
-      marcaEl.appendChild(opt);
-    });
-
-    marcaEl.addEventListener("change", () => {
-      modeloEl.innerHTML = `<option value="" disabled selected hidden>Modelo</option>`;
-      anioEl.innerHTML = `<option value="" disabled selected hidden>Año</option>`;
-      versionEl.innerHTML = `<option value="" disabled selected hidden>Versión</option>`;
-      modeloEl.disabled = false;
-      anioEl.disabled = true;
-      versionEl.disabled = true;
-      submitBtn.disabled = true;
-
-      const modelos = Object.keys(data[marcaEl.value]);
-      modelos.forEach(mod => {
-        const opt = document.createElement("option");
-        opt.value = mod;
-        opt.textContent = mod;
-        modeloEl.appendChild(opt);
-      });
-    });
-
-    modeloEl.addEventListener("change", () => {
-      anioEl.innerHTML = `<option value="" disabled selected hidden>Año</option>`;
-      versionEl.innerHTML = `<option value="" disabled selected hidden>Versión</option>`;
-      anioEl.disabled = false;
-      versionEl.disabled = true;
-      submitBtn.disabled = true;
-
-      const anios = Object.keys(data[marcaEl.value][modeloEl.value]);
-      anios.forEach(anio => {
-        const opt = document.createElement("option");
-        opt.value = anio;
-        opt.textContent = anio;
-        anioEl.appendChild(opt);
-      });
-    });
-
-    anioEl.addEventListener("change", () => {
-      versionEl.innerHTML = `<option value="" disabled selected hidden>Versión</option>`;
-      versionEl.disabled = false;
-      submitBtn.disabled = true;
-
-      const versiones = Object.keys(
-        data[marcaEl.value][modeloEl.value][anioEl.value]
-      );
-      versiones.forEach(ver => {
-        const opt = document.createElement("option");
-        opt.value = ver;
-        opt.textContent = ver;
-        versionEl.appendChild(opt);
-      });
-    });
-
-    versionEl.addEventListener("change", () => {
-      submitBtn.disabled = false;
-    });
+    })();
+  </script>
 
 
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-      const marca = marcaEl.value;
-      const modelo = modeloEl.value;
-      const anio = anioEl.value;
-      const version = versionEl.value;
-
-      const specs =
-        data[marca]?.[modelo]?.[anio]?.[version] || null;
-
-      if (!specs) {
-        alert("No se encontraron especificaciones.");
-        return;
-      }
-
-      const rodado =
-        /^R/i.test(specs.Rin) ? specs.Rin.toUpperCase() : "R" + specs.Rin;
-
-      const params = new URLSearchParams({
-        Ancho: specs.Ancho,
-        Alto: specs.Alto,
-        Rodada: rodado
-      });
-
-      const finalURL = `${slugCategoria}?${params.toString()}`;
-      window.location.href = finalURL;
-    });
-  })();
-</script>
 
 
 
