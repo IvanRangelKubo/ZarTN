@@ -135,7 +135,7 @@
       gap: 20px;
     }
 
-    select#alto, select#ancho, select#rodado,select#brand {
+    select#alto, select#ancho, select#rodado,select#brand,select#marca,select#modelo,select#anio,select#version {
         margin: 0;
         border-radius: 0;
     }
@@ -248,7 +248,7 @@
       const versionSelect = document.getElementById("version");
       const submitBtn = form.querySelector("button[type='submit']");
 
-      const modelsUrl = "{{ 'utils/models.json' | static_url }}";
+      const modelsUrl = "{{ 'utils/modelsTest.json' | static_url }}";
 
       fetch(modelsUrl)
         .then((res) => res.json())
