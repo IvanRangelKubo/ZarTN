@@ -64,31 +64,44 @@
 
           <select name="Ancho" id="ancho" class="form-select loginreg-field w-select">
             <option value="" disabled selected hidden>Ancho</option>
-            <option value="30">30</option>
-            <option value="35">35</option>
-            <option value="40">40</option>
+            <option value="195">195</option>
+            <option value="205">205</option>
+            <option value="215">215</option>
+            <option value="225">225</option>
+            <option value="235">235</option>
           </select>
+
 
           <select name="Alto" id="alto" class="form-select loginreg-field w-select">
             <option value="" disabled selected hidden>Alto</option>
             <option value="50">50</option>
             <option value="55">55</option>
             <option value="60">60</option>
+            <option value="65">65</option>
+            <option value="70">70</option>
+            <option value="75">75</option>
           </select>
+
 
           <select name="Rodado" id="rodado" class="form-select loginreg-field w-select">
             <option value="" disabled selected hidden>Rodado</option>
             <option value="R15">R15</option>
-            <option value="16">R16</option> 
-            <option value="R17">R17</option> 
+            <option value="R16">R16</option>
+            <option value="R17">R17</option>
+            <option value="R18">R18</option>
+            <option value="R19">R19</option>
+            <option value="R20">R20</option>
           </select>
+
 
           <select name="Brand" id="brand" class="form-select loginreg-field w-select">
             <option value="" disabled selected hidden>Marca</option>
             <option value="Alliance">Alliance</option>
-            <option value="Firestone">Firestone</option> 
-            <option value="Yokohama">Yokohama</option> 
+            <option value="Firestone">Firestone</option>
+            <option value="Yokohama">Yokohama</option>
+            <option value="Bridgestone">Bridgestone</option>
           </select>
+
 
           <button type="submit" class="btn btn-primary loginpopbtn w-button">Buscar</button>
         </form>
@@ -248,7 +261,7 @@
       const versionSelect = document.getElementById("version");
       const submitBtn = form.querySelector("button[type='submit']");
 
-      const modelsUrl = "{{ 'utils/modelsTest.json' | static_url }}";
+      const modelsUrl = "{{ 'utils/modelsTest2.json' | static_url }}";
 
       fetch(modelsUrl)
         .then((res) => res.json())
@@ -335,7 +348,8 @@
             const params = new URLSearchParams({
               Ancho: medidas.Ancho,
               Alto: medidas.Alto,
-              Rodada: "R" + medidas.Rin,
+              //Rodada: "R" + medidas.Rin,
+              Rodada: medidas.Rin,
             });
             window.location.href = `/productos?${params.toString()}`;
           } else {
