@@ -522,10 +522,15 @@ Listado de productos
 		advanced = true
 	title
 		title = Filtros
+	dropdown
+		name = category_filter_type
+		description = Tipo de filtros
+		values
+			modal = Barra lateral
+			vertical = Vertical
+			horizontal = Horizontal
 	subtitle
 		subtitle = <span class='js-description-html'><strong>Configurá los filtros</strong> de tu tienda desde <a target='_blank' href='/admin/v2/filters' class='font-bold'>el administrador</a></span>
-	title
-    title = Productos en el listado
 	dropdown
 		name = category_quantity_products
 		description = Cantidad de productos por página

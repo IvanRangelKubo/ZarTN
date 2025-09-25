@@ -30,9 +30,12 @@
 							<div class="filtersCategory">
 								<span class="sortLabel">Filtrar por:</span>
 								{% if has_filters_available %}
+
+
 									<a href="#" class="js-modal-open filter-link" data-toggle="#nav-filters">
 										{{ 'Filtrar' | t }} {% include "snipplets/svg/filter.tpl" with {svg_custom_class: "icon-inline icon-w-16"} %}
 									</a>
+
 									{% embed "snipplets/modal.tpl" with{modal_id: 'nav-filters', modal_class: 'filters modal-docked-small', modal_position: 'left', modal_transition: 'slide', modal_width: 'full'} %}
 										{% block modal_head %}
 											{{'Filtros' | translate }}
@@ -52,6 +55,8 @@
 											</div>
 										{% endblock %}
 									{% endembed %}
+
+
 								{% endif %}
 							</div>
 							
