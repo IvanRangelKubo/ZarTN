@@ -109,34 +109,35 @@
 							</div>
 
 							<div class="filterSort mobile">
+								{% if settings.category_filter_type == "vertical" or settings.category_filter_type == "horizontal" %}
+									<div class="mobileFilters">
 
-								<div class="mobileFilters">
+										<a href="#" class="js-modal-open filter-link" data-toggle="#nav-filters">
+											{{ 'Filtrar' | t }} {% include "snipplets/svg/filter.tpl" with {svg_custom_class: "icon-inline icon-w-16"} %}
+										</a>
 
-									<a href="#" class="js-modal-open filter-link" data-toggle="#nav-filters">
-										{{ 'Filtrar' | t }} {% include "snipplets/svg/filter.tpl" with {svg_custom_class: "icon-inline icon-w-16"} %}
-									</a>
-
-									{% embed "snipplets/modal.tpl" with{modal_id: 'nav-filters', modal_class: 'filters modal-docked-small', modal_position: 'left', modal_transition: 'slide', modal_width: 'full'} %}
-										{% block modal_head %}
-											{{'Filtros' | translate }}
-										{% endblock %}
-										{% block modal_body %}
-											{% if filter_categories is not empty %}
-												{% snipplet "grid/categories.tpl" %}
-											{% endif %}
-											{% if product_filters is not empty %}
-												{% snipplet "grid/filters.tpl" %}
-											{% endif %}
-											<div class="js-filters-overlay filters-overlay" style="display: none;">
-												<div class="filters-updating-message">
-													<h3 class="js-applying-filter" style="display: none;">{{ 'Aplicando filtro...' | translate }}</h3>
-													<h3 class="js-removing-filter" style="display: none;">{{ 'Borrando filtro...' | translate }}</h3>
+										{% embed "snipplets/modal.tpl" with{modal_id: 'nav-filters', modal_class: 'filters modal-docked-small', modal_position: 'left', modal_transition: 'slide', modal_width: 'full'} %}
+											{% block modal_head %}
+												{{'Filtros' | translate }}
+											{% endblock %}
+											{% block modal_body %}
+												{% if filter_categories is not empty %}
+													{% snipplet "grid/categories.tpl" %}
+												{% endif %}
+												{% if product_filters is not empty %}
+													{% snipplet "grid/filters.tpl" %}
+												{% endif %}
+												<div class="js-filters-overlay filters-overlay" style="display: none;">
+													<div class="filters-updating-message">
+														<h3 class="js-applying-filter" style="display: none;">{{ 'Aplicando filtro...' | translate }}</h3>
+														<h3 class="js-removing-filter" style="display: none;">{{ 'Borrando filtro...' | translate }}</h3>
+													</div>
 												</div>
-											</div>
-										{% endblock %}
-									{% endembed %}
+											{% endblock %}
+										{% endembed %}
 
-								</div>
+									</div>
+								{% endif %}
 
 								<div class="divordenar mobile">
 									<div class="ordenar-selector">
@@ -198,7 +199,7 @@
 				border: none;
 		}
 
-		.divordenar.mobile {
+		.divordenar.mobile, .filterSort.mobile {
 			display: none;
 		}
 
@@ -223,7 +224,7 @@
 					top: 0 !important;
 				}
 
-				.divordenar.mobile {
+				.divordenar.mobile, .filterSort.mobile {
 						display: block;
 				}
 			}
