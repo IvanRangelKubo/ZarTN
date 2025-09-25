@@ -29,12 +29,13 @@
 
     <style>
 
-      .FilterTitle {
-          text-align: left;
-          font-size: medium;
-          font-weight: 600;
-          width: 100%;
-      }
+        .FilterTitle {
+            text-align: left;
+            font-size: medium;
+            font-weight: 600;
+            width: 100%;
+            margin-bottom: 20px;
+        }
 
       .filters-container {
           display: flex;

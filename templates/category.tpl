@@ -66,7 +66,7 @@
 
 											<div class="ApliedFilters">
 												<span class="sortLabel">Filtrar por: </span>
-												{% include "snipplets/grid/filters.tpl" with {applied_filters: true} %}
+												{% include "snipplets/grid/vertical-filters.tpl" with {applied_filters: true} %}
 											</div>
 
 											<div class="filtersSection">
@@ -275,6 +275,7 @@
 				border-bottom: 2px solid var(--brand-red);
 				padding-bottom: 10px;
 				width: 100%;
+				margin-bottom: 15px;
 		}
 
 		.filtersCategory {

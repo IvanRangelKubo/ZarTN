@@ -1,29 +1,114 @@
-{% if filter_categories %}
-    <div class="filters-container mb-5">
-        <h6 class="mb-3">{{ "Categorías" | translate }}</h6>
-        <ul class="list-unstyled"> 
-            {% for category in filter_categories %}
-                <li data-item="{{ loop.index }}" class="mb-3">
-                    <a href="{{ category.url }}" title="{{ category.name }}" class="text-primary">
-                        {{ category.name }}
-                    </a>
-                </li>
+{% if applied_filters %}
+    
+    {# Applied filters chips #}
 
-                {% if loop.index == 8 and filter_categories | length > 8 %}
-                    <div class="js-accordion-container" style="display: none;">
-                {% endif %}
-                {% if loop.last and filter_categories | length > 8 %}
-                    </div>
-                    <a href="#" class="js-accordion-toggle btn-link d-inline-block mt-1 pl-0">
-                        <span class="js-accordion-toggle-inactive">
-                            {{ 'Ver más' | translate }}
-                        </span>
-                        <span class="js-accordion-toggle-active" style="display: none;">
-                            {{ 'Ver menos' | translate }}
-                        </span>
-                    </a>
+    {% if has_applied_filters %}
+        <div class="col-12 mb-3 containerFiltersApplied">
+            <div class="filtersList">
+              {% for product_filter in product_filters %}
+                  {% for value in product_filter.values %}
+
+                      {# List applied filters as tags #}
+                      {% if value.selected %}
+                          <button class="js-remove-filter chip" data-filter-name="{{ product_filter.key }}" data-filter-value="{{ value.name }}">
+                              {{ value.pill_label }}
+                              {% include "snipplets/svg/times.tpl" with {svg_custom_class: "icon-inline chip-remove-icon"} %}
+                          </button>
+                      {% endif %}
+                  {% endfor %}
+              {% endfor %}
+            </div>
+            <a href="#" class="js-remove-all-filters d-inline-block px-0">{{ 'Borrar filtros' | translate }}</a> 
+        </div>
+    {% endif %}
+
+{% else %}
+    {% if product_filters is not empty %}
+        <div id="filters" data-store="filters-nav">
+            {% for product_filter in product_filters %}
+                {% if product_filter.type == 'price' %}
+
+                    {{ component(
+                        'price-filter',
+                        {'group_class': 'filters-container mb-5', 'title_class': 'FilterTitle', 'button_class': 'btn btn-default px-2 px-md-3 align-bottom' }
+                    ) }}
+
+                {% else %}
+                    {% if product_filter.has_products %}
+                        <div class="filters-container mb-5" data-store="filters-group">
+                            <h6 class="FilterTitle">{{product_filter.name}}</h6>
+                            {% set index = 0 %}
+                            {% for value in product_filter.values %}
+                                {% if value.product_count > 0 %}
+                                    {% set index = index + 1 %}
+                                    <label class="js-filter-checkbox {% if not value.selected %}js-apply-filter{% else %}js-remove-filter{% endif %} checkbox-container font-weight-bold {% if mobile %}mb-3{% else %}mb-2{% endif %}" data-filter-name="{{ product_filter.key }}" data-filter-value="{{ value.name }}">
+                                        <span class="checkbox">
+                                            <input type="checkbox" autocomplete='off' {% if value.selected %}checked{% endif %}>
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">{{ value.name }} ({{ value.product_count }})</span>
+                                            {% if product_filter.type == 'color' and value.color_type == 'insta_color' %}
+                                                <span class="checkbox-color" style="background-color: {{ value.color_hexa }};"></span>
+                                            {% endif %}
+                                        </span>
+                                    </label>
+                                    {% if index == 8 and product_filter.values_with_products > 8 %}
+                                        <div class="js-accordion-container" style="display: none;">
+                                    {% endif %}
+                                {% endif %}
+                                {% if loop.last and product_filter.values_with_products > 8 %}
+                                    </div>
+                                    <a href="#" class="js-accordion-toggle btn-link d-inline-block mt-1 pl-0">
+                                        <span class="js-accordion-toggle-inactive">
+                                            {{ 'Ver todos' | translate }}
+                                        </span>
+                                        <span class="js-accordion-toggle-active" style="display: none;">
+                                            {{ 'Ver menos' | translate }}
+                                        </span>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
                 {% endif %}
             {% endfor %}
-        </ul>
-    </div>
+        </div>
+    {% endif %}
 {% endif %}
+
+<style>
+
+    .col-12.mb-3.containerFiltersApplied {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 0;
+        padding-bottom: 1rem;
+        margin: 0 !important;
+        border-bottom: 2px solid var(--brand-red);
+    }
+
+    button.js-remove-filter.chip {
+        background: white;
+        border: 1px solid black;
+    }
+
+    label.js-filter-checkbox.js-apply-filter.checkbox-container.font-weight-bold.mb-2, label.js-filter-checkbox.js-remove-filter.checkbox-container.font-weight-bold.mb-2 {
+        padding-left: 10px;
+    }
+
+    .filtersList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+
+    button.js-price-filter-btn.btn.btn-default.px-2.px-md-3.align-bottom {
+      color: white;
+      background: var(--brand-red);
+    }
+
+</style>
