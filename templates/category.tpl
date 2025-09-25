@@ -26,36 +26,74 @@
 					<div class="js-category-controls-prev category-controls-sticky-detector"></div>
 					<div class="js-category-controls row align-items-center mb-md-3 category-controls categoryFilters">
 						{% if products %}
-							{% set columns = settings.grid_columns %}
+
 							<div class="filtersCategory">
-								<span class="sortLabel">Filtrar por:</span>
 								{% if has_filters_available %}
+									
 
+									{% if settings.category_filter_type == "modal" %}
 
-									<a href="#" class="js-modal-open filter-link" data-toggle="#nav-filters">
-										{{ 'Filtrar' | t }} {% include "snipplets/svg/filter.tpl" with {svg_custom_class: "icon-inline icon-w-16"} %}
-									</a>
+										<span class="sortLabel">Filtrar por: </span>
 
-									{% embed "snipplets/modal.tpl" with{modal_id: 'nav-filters', modal_class: 'filters modal-docked-small', modal_position: 'left', modal_transition: 'slide', modal_width: 'full'} %}
-										{% block modal_head %}
-											{{'Filtros' | translate }}
-										{% endblock %}
-										{% block modal_body %}
-											{% if filter_categories is not empty %}
-												{% snipplet "grid/categories.tpl" %}
-											{% endif %}
-											{% if product_filters is not empty %}
-												{% snipplet "grid/filters.tpl" %}
-											{% endif %}
-											<div class="js-filters-overlay filters-overlay" style="display: none;">
-												<div class="filters-updating-message">
-													<h3 class="js-applying-filter" style="display: none;">{{ 'Aplicando filtro...' | translate }}</h3>
-													<h3 class="js-removing-filter" style="display: none;">{{ 'Borrando filtro...' | translate }}</h3>
+										<a href="#" class="js-modal-open filter-link" data-toggle="#nav-filters">
+											{{ 'Filtrar' | t }} {% include "snipplets/svg/filter.tpl" with {svg_custom_class: "icon-inline icon-w-16"} %}
+										</a>
+
+										{% embed "snipplets/modal.tpl" with{modal_id: 'nav-filters', modal_class: 'filters modal-docked-small', modal_position: 'left', modal_transition: 'slide', modal_width: 'full'} %}
+											{% block modal_head %}
+												{{'Filtros' | translate }}
+											{% endblock %}
+											{% block modal_body %}
+												{% if filter_categories is not empty %}
+													{% snipplet "grid/categories.tpl" %}
+												{% endif %}
+												{% if product_filters is not empty %}
+													{% snipplet "grid/filters.tpl" %}
+												{% endif %}
+												<div class="js-filters-overlay filters-overlay" style="display: none;">
+													<div class="filters-updating-message">
+														<h3 class="js-applying-filter" style="display: none;">{{ 'Aplicando filtro...' | translate }}</h3>
+														<h3 class="js-removing-filter" style="display: none;">{{ 'Borrando filtro...' | translate }}</h3>
+													</div>
 												</div>
-											</div>
-										{% endblock %}
-									{% endembed %}
+											{% endblock %}
+										{% endembed %}
 
+									{% endif %}
+
+									{% if settings.category_filter_type == "vertical" %}
+										<div class="verticalFilters">
+											<span class="sortLabel">Filtrar por: </span>
+											<div class="filtersSection">
+												{% if filter_categories is not empty %}
+													{% snipplet "grid/vertical-categories.tpl" %}
+												{% endif %}
+											</div>
+
+											<div class="filtersSection">
+												{% if product_filters is not empty %}
+													{% snipplet "grid/vertical-filters.tpl" %}
+												{% endif %}
+											</div>
+										</div>
+									{% endif %}
+
+									{% if settings.category_filter_type == "horizontal" %}
+										<div class="horizontalFilters">
+											<span class="sortLabel">Filtrar por: </span>
+											<div class="filtersSection">
+												{% if filter_categories is not empty %}
+													{% snipplet "grid/horizontal-categories.tpl" %}
+												{% endif %}
+											</div>
+
+											<div class="filtersSection">
+												{% if product_filters is not empty %}
+													{% snipplet "grid/horizontal-filters.tpl" %}
+												{% endif %}
+											</div>
+										</div>
+									{% endif %}
 
 								{% endif %}
 							</div>
@@ -69,11 +107,11 @@
 						{% endif %}
 					</div>
 
-					<!-- Filters -->
+					<!-- Filters aplied -->
 					<div class="row ApliedFilters">
 						{% include "snipplets/grid/filters.tpl" with {applied_filters: true} %}
 					</div>
-					<!-- Filters -->
+					<!-- Filters aplied-->
 				</div>
 
 				<div class="column-11 w-col w-col-9">
@@ -103,6 +141,53 @@
 		</div>
 	</section>
 	<style>
+
+		.form-select-icon {
+				display: none;
+		}
+
+		select.form-select.js-sort-by.ordenar-txt {
+				padding: 0;
+				border: none;
+		}
+
+		.divordenar.mobile {
+			display: none;
+		}
+
+		.listing-header {
+				margin-bottom: 10px;
+		}
+
+		    @media screen and (max-width: 479px) {
+				.col-12.mb-3.containerFiltersApplied {
+					flex-wrap: wrap;
+				}
+
+				.js-category-controls.row.align-items-center.mb-md-3.category-controls.categoryFilters {
+					margin: 0px 10px 25px 10px;
+				}
+
+				.filtersCategory {
+					gap: 10px;
+				}
+
+				.category-controls {
+					top: 0 !important;
+				}
+
+				.divordenar.mobile {
+						display: block;
+				}
+			}
+
+	</style>
+
+
+{% if settings.category_filter_type == "modal" %}
+
+	<style>
+
 		.sortBy {
 				display: flex;
 				flex-direction: row;
@@ -162,46 +247,26 @@
 			margin: auto !important;
 		}
 
-		.form-select-icon {
-				display: none;
-		}
+	</style>
 
-		select.form-select.js-sort-by.ordenar-txt {
-				padding: 0;
-				border: none;
-		}
+{% endif %}
 
-		.divordenar.mobile {
-			display: none;
-		}
+{% if settings.category_filter_type == "vertical" %}
 
-		.listing-header {
-				margin-bottom: 10px;
-		}
-
-		    @media screen and (max-width: 479px) {
-				.col-12.mb-3.containerFiltersApplied {
-					flex-wrap: wrap;
-				}
-
-				.js-category-controls.row.align-items-center.mb-md-3.category-controls.categoryFilters {
-					margin: 0px 10px 25px 10px;
-				}
-
-				.filtersCategory {
-					gap: 10px;
-				}
-
-				.category-controls {
-					top: 0 !important;
-				}
-
-				.divordenar.mobile {
-						display: block;
-				}
-			}
+	<style>
 
 	</style>
+
+{% endif %}
+
+{% if settings.category_filter_type == "horizontal" %}
+
+	<style>
+
+	</style>
+
+{% endif %}
+
 {% elseif show_help %}
 	{# Category Placeholder #}
 	{% include 'snipplets/defaults/show_help_category.tpl' %}

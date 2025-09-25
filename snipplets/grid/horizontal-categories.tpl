@@ -1,0 +1,1 @@
+<div>Horizontal categories</div>
