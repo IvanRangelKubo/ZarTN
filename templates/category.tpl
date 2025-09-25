@@ -81,6 +81,7 @@
 												{% endif %}
 											</div>
 										</div>
+
 									{% endif %}
 
 									{% if settings.category_filter_type == "horizontal" %}
@@ -107,9 +108,40 @@
 								{% endif %}
 							</div>
 
-							<div class="divordenar mobile">
-								<div class="ordenar-selector">
-									{% include 'snipplets/grid/sort-by.tpl' %}
+							<div class="filterSort mobile">
+
+								<div class="mobileFilters">
+
+									<a href="#" class="js-modal-open filter-link" data-toggle="#nav-filters">
+										{{ 'Filtrar' | t }} {% include "snipplets/svg/filter.tpl" with {svg_custom_class: "icon-inline icon-w-16"} %}
+									</a>
+
+									{% embed "snipplets/modal.tpl" with{modal_id: 'nav-filters', modal_class: 'filters modal-docked-small', modal_position: 'left', modal_transition: 'slide', modal_width: 'full'} %}
+										{% block modal_head %}
+											{{'Filtros' | translate }}
+										{% endblock %}
+										{% block modal_body %}
+											{% if filter_categories is not empty %}
+												{% snipplet "grid/categories.tpl" %}
+											{% endif %}
+											{% if product_filters is not empty %}
+												{% snipplet "grid/filters.tpl" %}
+											{% endif %}
+											<div class="js-filters-overlay filters-overlay" style="display: none;">
+												<div class="filters-updating-message">
+													<h3 class="js-applying-filter" style="display: none;">{{ 'Aplicando filtro...' | translate }}</h3>
+													<h3 class="js-removing-filter" style="display: none;">{{ 'Borrando filtro...' | translate }}</h3>
+												</div>
+											</div>
+										{% endblock %}
+									{% endembed %}
+
+								</div>
+
+								<div class="divordenar mobile">
+									<div class="ordenar-selector">
+										{% include 'snipplets/grid/sort-by.tpl' %}
+									</div>
 								</div>
 							</div>
 							
@@ -117,13 +149,14 @@
 						{% endif %}
 					</div>
 
-					<!-- Filters aplied -->
 					{% if settings.category_filter_type == "modal" %}
+						<!-- Filters aplied -->
 						<div class="row ApliedFilters">
 							{% include "snipplets/grid/filters.tpl" with {applied_filters: true} %}
 						</div>
+						<!-- Filters aplied-->
 					{% endif %}
-					<!-- Filters aplied-->
+
 				</div>
 
 				<div class="column-11 w-col w-col-9">
@@ -149,6 +182,7 @@
 					{% endif %}
 					<!-- Products -->
 				</div>
+
 			</div>
 		</div>
 	</section>
@@ -178,7 +212,7 @@
 				}
 
 				.js-category-controls.row.align-items-center.mb-md-3.category-controls.categoryFilters {
-					margin: 0px 10px 25px 10px;
+					margin: 0px 10px 0px 10px;
 				}
 
 				.filtersCategory {
@@ -268,6 +302,10 @@
 
 	<style>
 
+		.js-category-controls.row.align-items-center.mb-md-3.category-controls.categoryFilters.is-sticky {
+				border: none;
+		}
+
 		.sortLabel {
 				text-align: left;
 				font-size: medium;
@@ -298,6 +336,31 @@
 
 		.filtersSection {
 				width: 100%;
+		}
+
+		.filterSort.mobile {
+			display: none;
+		}
+
+		@media screen and (max-width: 479px) {
+
+			a.js-modal-open.filter-link {
+					border: 1px solid;
+					padding: 4px 15px;
+			}
+
+			.verticalFilters {
+				display: none;
+			}
+
+			.filterSort.mobile {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 20px;
+			}
+
 		}
 
 	</style>

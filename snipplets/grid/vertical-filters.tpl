@@ -30,12 +30,12 @@
 
                     {{ component(
                         'price-filter',
-                        {'group_class': 'filters-container mb-5', 'title_class': 'FilterTitle', 'button_class': 'btn btn-default px-2 px-md-3 align-bottom' }
+                        {'group_class': 'filters-container', 'title_class': 'FilterTitle', 'button_class': 'btn btn-default px-2 px-md-3 align-bottom' }
                     ) }}
 
                 {% else %}
                     {% if product_filter.has_products %}
-                        <div class="filters-container mb-5" data-store="filters-group">
+                        <div class="filters-container" data-store="filters-group">
                             <h6 class="FilterTitle">{{product_filter.name}}</h6>
                             {% set index = 0 %}
                             {% for value in product_filter.values %}
@@ -111,4 +111,32 @@
       background: var(--brand-red);
     }
 
+</style>
+
+<style>
+
+    .FilterTitle {
+        text-align: left;
+        font-size: medium;
+        font-weight: 600;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .filters-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 2px solid var(--brand-red);
+        margin-bottom: 20px;
+    }
+
+    .filterOption {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    li.mb-3 {
+        text-align: left;
+    }
 </style>
