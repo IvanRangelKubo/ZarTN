@@ -74,7 +74,7 @@
 								<div class="w-checkbox-input w-checkbox-input--inputType-custom logincheck"></div>
 								<input type="checkbox" name="checkbox-2" id="checkbox-2" data-name="Checkbox 2" required="" style="opacity:0;position:absolute;z-index:-1" oninvalid="this.setCustomValidity('Marque esta casilla si desea continuar')" oninput="this.setCustomValidity('')">
 								<span class="w-form-label" for="checkbox-2">
-									<a href="/aviso-de-privacidad-zar" class="labelcheck-tyc">Acepto el Aviso de Privacidad</a>
+									<a href="/aviso-de-privacidad" class="labelcheck-tyc">Acepto el Aviso de Privacidad</a>
 								</span>
 							</label>
 
