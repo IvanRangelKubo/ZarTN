@@ -63,7 +63,12 @@
 
 									{% if settings.category_filter_type == "vertical" %}
 										<div class="verticalFilters">
-											<span class="sortLabel">Filtrar por: </span>
+
+											<div class="ApliedFilters">
+												<span class="sortLabel">Filtrar por: </span>
+												{% include "snipplets/grid/filters.tpl" with {applied_filters: true} %}
+											</div>
+
 											<div class="filtersSection">
 												{% if filter_categories is not empty %}
 													{% snipplet "grid/vertical-categories.tpl" %}
@@ -80,7 +85,11 @@
 
 									{% if settings.category_filter_type == "horizontal" %}
 										<div class="horizontalFilters">
-											<span class="sortLabel">Filtrar por: </span>
+											
+											<div class="ApliedFilters">
+												<span class="sortLabel">Filtrar por: </span>
+												{% include "snipplets/grid/filters.tpl" with {applied_filters: true} %}
+											</div>
 											<div class="filtersSection">
 												{% if filter_categories is not empty %}
 													{% snipplet "grid/horizontal-categories.tpl" %}
@@ -97,20 +106,23 @@
 
 								{% endif %}
 							</div>
-							
+
 							<div class="divordenar mobile">
 								<div class="ordenar-selector">
 									{% include 'snipplets/grid/sort-by.tpl' %}
 								</div>
 							</div>
+							
 
 						{% endif %}
 					</div>
 
 					<!-- Filters aplied -->
-					<div class="row ApliedFilters">
-						{% include "snipplets/grid/filters.tpl" with {applied_filters: true} %}
-					</div>
+					{% if settings.category_filter_type == "modal" %}
+						<div class="row ApliedFilters">
+							{% include "snipplets/grid/filters.tpl" with {applied_filters: true} %}
+						</div>
+					{% endif %}
 					<!-- Filters aplied-->
 				</div>
 
@@ -140,6 +152,7 @@
 			</div>
 		</div>
 	</section>
+
 	<style>
 
 		.form-select-icon {
@@ -188,6 +201,12 @@
 
 	<style>
 
+		.sortLabel {
+			font-size: medium;
+			font-weight: 600;
+			color: #c33;
+		}
+
 		.sortBy {
 				display: flex;
 				flex-direction: row;
@@ -215,12 +234,6 @@
 
 		.sortBy > .form-group.mb-0 {
 				width: 25%;
-		}
-
-		.sortLabel {
-			font-size: medium;
-			font-weight: 600;
-			color: #c33;
 		}
 
 		.sortBy > .form-group > select.form-select.js-sort-by {
@@ -254,6 +267,37 @@
 {% if settings.category_filter_type == "vertical" %}
 
 	<style>
+
+		.sortLabel {
+				text-align: left;
+				font-size: medium;
+				font-weight: 500;
+				border-bottom: 2px solid var(--brand-red);
+				padding-bottom: 10px;
+				width: 100%;
+		}
+
+		.filtersCategory {
+				width: 100%;
+				margin-top: 10px;
+		}
+
+		.verticalFilters {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				align-items: flex-start !important;
+		}
+
+		.ApliedFilters {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.filtersSection {
+				width: 100%;
+		}
 
 	</style>
 
