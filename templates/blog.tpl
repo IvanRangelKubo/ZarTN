@@ -14,7 +14,7 @@
             {% for post in blog.posts %}
 
                 <a href="{{ shop.url }}/blog/posts/{{ post.handle }}" class="itemblog-carrusel listing w-inline-block">
-                    <div class="miniatura-entradablog listing" style="background-image: url('{{ post.thumbnail | default('images/placeholder-zar.jpg' | static_url ) }}');" ></div>
+                    <div class="miniatura-entradablog listing" style="background-image: url('{{ post.thumbnail | default('images/llanta_ejemplo.jpg' | static_url ) }}');" ></div>
                     <div class="itemsblog-listing">
                         <div class="date-blog">{{ post.date | date("d/m/Y") }}</div>
                         <h5 class="titulo-entryblog">{{ post.title }}</h5>

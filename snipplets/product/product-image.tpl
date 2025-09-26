@@ -23,7 +23,7 @@
 			</div>
 		</div>
 {% else %}
-	<img src="{{ 'images/placeholder-zar.jpg' | static_url }}" alt="{{ product.name }}">
+	<img src="{{ 'images/llanta_ejemplo.jpg' | static_url }}" alt="{{ product.name }}">
 {% endif %}
 
 <img loading="lazy" src="{{ "images/share-icon.svg" | static_url }}" alt="Compartir" class="shareicon" data-ix="showsocialshare">

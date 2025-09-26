@@ -42,7 +42,7 @@
                         style="background-image:url({{ featured_url }})"></div>
                   {% else %}
                     <div class="imgfront {% if product.images_count > 1 %}hoverOn{% endif %}"
-                        style="background-image:url({{ 'images/placeholder-zar.jpg' | static_url }})"></div>
+                        style="background-image:url({{ 'images/llanta_ejemplo.jpg' | static_url }})"></div>
                   {% endif %}
                 </a>
               </div>

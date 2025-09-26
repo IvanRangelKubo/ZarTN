@@ -13,7 +13,7 @@
                     {% if has_real_image %}
                         {{ product.featured_image | product_image_url('tiny') | img_tag(product.featured_image.alt, { class: 'picrecomend' }) }}
                     {% else %}
-                        <img src="{{ 'images/placeholder-zar.jpg' | static_url }}" alt="Imagen no disponible" class="picrecomend">
+                        <img src="{{ 'images/llanta_ejemplo.jpg' | static_url }}" alt="Imagen no disponible" class="picrecomend">
                     {% endif %}
 
                 </div>
