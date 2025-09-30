@@ -166,10 +166,24 @@
         padding: 30px;
     }
 
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      div#wheelSearch {
+          padding: 0 25px;
+      }
+
+      .deepSearchForm {
+          gap: 10px;
+      }
+    }
+
     @media screen and (max-width: 479px) {
       .deepSearchForm {
         flex-wrap: wrap;
         padding: 20px;
+      }
+
+      button.btn.btn-primary.loginpopbtn.w-button {
+          min-width: 130px;
       }
     }
   </style>
