@@ -194,6 +194,11 @@
 				display: none;
 		}
 
+		a.js-accordion-toggle.btn-link.d-inline-block.mt-1.pl-0 {
+			margin-bottom: 10px;
+			border-bottom: none;
+		}
+
 		select.form-select.js-sort-by.ordenar-txt {
 				padding: 0;
 				border: none;
